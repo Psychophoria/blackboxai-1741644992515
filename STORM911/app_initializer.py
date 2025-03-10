@@ -19,6 +19,7 @@ from api_handler import APIHandler
 from pdf_handler import PDFHandler
 from email_handler import EmailHandler
 from disposition_handler import DispositionHandler
+from menu_manager import MenuManager
 
 class AppInitializer:
     def __init__(self):
@@ -96,6 +97,11 @@ class AppInitializer:
             self.managers['dialog'] = DialogManager(
                 self.root,
                 self.managers['theme']
+            )
+            self.managers['menu'] = MenuManager(
+                self.root,
+                self.managers,
+                self.handlers
             )
             
             logging.info("Application managers initialized successfully")
@@ -201,6 +207,9 @@ class AppInitializer:
             # Store reference
             self.root.main_container = main_container
             
+            # Create menu
+            self.managers['menu'].create_toolbar(main_container)
+            
             logging.info("UI components initialized successfully")
             
         except Exception as e:
@@ -245,11 +254,3 @@ class AppInitializer:
             except Exception as e:
                 logging.error(f"Error during shutdown: {str(e)}")
                 self.root.destroy()
-    
-    def get_manager(self, name: str) -> Any:
-        """Get manager instance by name"""
-        return self.managers.get(name)
-    
-    def get_handler(self, name: str) -> Any:
-        """Get handler instance by name"""
-        return self.handlers.get(name)
