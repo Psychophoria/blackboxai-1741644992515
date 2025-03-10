@@ -1,0 +1,2839 @@
+################################################################################
+# RULES AND RESTRICTIONS
+################################################################################\
+
+# REQUIREMENTS
+#1. You are REQUIRED to create the ENTIRE "Storm911" Python GUI-based application ENTIRELY from scratch as outlined below by the "INSTRUCTIONS FOR AUTONOMOUS GENERATION OF THE STORM911 PYTHON GUI APPLICATION" as well as the "Program Overview Report: Storm911 Application" section, ensuring that you FULLY & COMPLETE integrate ALL the individual aspects & items laid out within these sections into the code without leaving anything incomplete, unfinished, non-functional, simulated (not real), and ensure that ALL ITEMS & ASPECTS from this entire prompt are all fully & completely integrated into the python program code. 
+
+#2. It is CRITICAL that this ENTIRE, COMPLETE program is completely confined to a single python file named "app.py" as well as a single "requirements.txt" file, and that you DO NOT generate, include or utilize ANY other files at all - the FULL program must be completely contained within the single "app.py" file.
+
+#3. You are REQUIRED to ensure that literally ALL ASPECTS & EVERYTHING from this prompt is fully & completely integrated into the program without leaving ANYTHING incomplete, unfinished, non-functional, simulated (not real), and ensure that ALL ITEMS & ASPECTS from this entire prompt are all fully & completely integrated into the python program code. 
+
+#4. You are REQUIRED to integrate literally EVERY SINGLE ITEM, COMPONENT, ASPECT, SYSTEM, FUNCTION, AND ALL OTHER MATERIAL LAID OUT IN THE "Program Overview Report: Storm911 Application" SECTION, ensuring that you FULLY & COMPLETELY include and integrate EVERYTHING! 
+
+#5. You are REQUIRED to generate a series of in-depth, detailed, extensive tasks & subtasks, including but not limited to the tasks & subtasks laid out in the "INSTRUCTIONS FOR AUTONOMOUS GENERATION OF THE STORM911 PYTHON GUI APPLICATION" section below, and you shall place ALL OF THE TASKS & SUBTASKS into a checklist filed named "CHECKLIST.txt" contained within the "STORM911" folder in your workspace - you must continuously & regularly update this checklist by indicating which items have been accomplished as well as adding additional items to the checklist as needed. It is CRITICAL that you include ALL of the following items to the checklist: 
+A. Integrate ALL of the 22 individual transcript pages (including the "START" SCREEN") as laid out within the "Program Overview Report: Storm911 Application" section in this prompt.
+B. Each individual transcript page MUST include ALL of the BUTTONS associated with each individual transcript page as laid out within the "Program Overview Report: Storm911 Application" section in this prompt.
+C. You must include ALL of the CALL DISPOSITION POP-UP WINDOW OPTIONS, BUTTONS & FUNCTIONALITIES laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+D. You must include ALL of the OBJECTIONS (both GROUP 1 & GROUP 2) laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+E. You must include ALL of the OBJECTION POP-UP WINDOWS laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+F. You must include ALL of the OBJECTIONS POP-UP BUTTONS laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+G. You must include ALL of the MAIN GUI LAYOUT & STRUCTURE ITEMS laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+H. You must include ALL of the PROCESSES & WORKFLOWS laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+I. You must include ALL of the CAPABILITIES & FUNCTIONALITIES laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+J. You must include ALL of the GUI AESTHETICS AND VISUAL DETAILS laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+K. You must include ALL of the DATA FLOW AND VARIABLE MAPPING items laid out within the "Program Overview Report: Storm911 Application" section of this prompt.
+L. You must include literally EVERY SINGLE ITEM that has been mentioned, described and listed within the "Program Overview Report: Storm911 Application" section of this prompt.
+
+#6. You are REQUIRED to review the "ReadyMode-Endpoints-Documentation.txt" document provided to you within the "DOCUMENTATION & DATA" folder in your local workspace in order to ensure you integrate ALL ReadyMode systems & functionalities correctly. 
+
+#7. You are REQUIRED to perform extensive, in-depth, detailed internet research in order to acquire ALL essential & needed documentation, data, package information, example code, and any other knowledge or information that you would be beneficial to utilize while generating this program.
+
+
+# RULES 
+
+#1. You must work fully autonomously & continuously without stopping, pausing, or ending your response & must do so by generating a detailed, in-depth series of tasks & subtasks, all of which ensure that EACH INDIVIDUAL ASPECT & ITEM from this prompt is accounted for & will be fully integrated into the python program "app.py" code, and being mindful & cautious to NOT generate ANY other files.
+
+#2. You must STRICTLY abide by ALL instructions laid out within this prompt at ALL times.
+
+#3. Do NOT stop, pause, or end your response(s) until you are 100% certain that you have FULLY & COMPLETELY accomplished EVERYTHING laid out within this prompt entirely, while ensuring that you have FULLY & COMPLETELY integrated ALL the individual aspects & items laid out within these sections into the code without leaving anything incomplete, unfinished, non-functional, simulated (not real), and ensure that ALL ITEMS & ASPECTS from this entire prompt are all fully & completely integrated into the python program code. 
+
+#4. You must follow ALL of the instructions provided in the upcoming section labeled "INSTRUCTIONS FOR AUTONOMOUS GENERATION OF THE STORM911 PYTHON GUI APPLICATION" COMPLETELY & ENTIRELY, ensuring that you STRICTLY abide by & accomplish ALL ASPECTS of EACH individual instruction, while additionally integrating any requirements, criteria, or essential/critical items which are NOT mentioned in the instructions & remainder of the prompt yet are required in order to fulfill everything laid out within this entier
+
+#5. You are REQUIRED to fully contain this ENTIRE program to both an "app.py" file as well as a "requirements.txt" file - you are NOT permitted to EVER create any additional files AT ALL!
+
+################################################################################
+# END OF RULES AND RESTRICTIONS
+################################################################################
+
+################################################################################
+# INSTRUCTIONS FOR AUTONOMOUS GENERATION OF THE STORM911 PYTHON GUI APPLICATION
+################################################################################
+
+# OVERVIEW
+This document contains comprehensive instructions that detail every aspect of the Storm911 application as described in the attached text file. The objective is to fully and completely generate a commercially viable, fully functional, and error‐free Python GUI application. The entire application must be encapsulated in a single Python program file, accompanied by a "requirements.txt" file, and must assume that the assets "storm911.png" and "assurecall.png" are placed into an "assets" folder in the same directory as the Python program file.
+
+# GENERAL GUIDELINES
+1. The AI agent MUST begin by performing an in-depth, line-by-line analysis of every piece of text from the attached document. Every detail, criterion, component, and specification must be understood and integrated.
+2. The AI agent MUST perform extensive research across at least 100+ reliable internet sources to gather the most up-to-date documentation, example code, and reference data needed for:
+   - Python GUI development best practices.
+   - Integration of the ReadyMode API for login and lead data retrieval.
+   - PDF generation and editing (using libraries such as ReportLab or FPDF).
+   - Email sending via GMAIL SMTP.
+   - Error handling, input validation, and aesthetic guidelines.
+3. The application MUST be built in a fully autonomous and continuous manner until the complete and error-free code is produced.
+4. If output exceeds the context/character limit, the AI agent MUST notify with "----> WARNING: CHARACTER/CONTEXT LIMIT REACHED, SHALL I CONTINUE WORKING IN THE NEXT RESPONSE? (Y//N) <----" and continue only upon user confirmation.
+5. The final solution MUST integrate every single aspect of the attached text document without leaving any feature missing, incomplete, unfinished, simulated/fake/pseudo, or causing any runtime errors.
+
+# TASKS & SUBTASKS
+
+## Task 1: In-Depth Analysis and Comprehension
+- 1.1: Read every individual line of the attached txt file.
+- 1.2: Parse and fully understand each specification including:
+  - GUI layout details (three-panel design: CALLER DATA & INFO, TRANSCRIPT, OBJECTIONS).
+  - Detailed descriptions of each sub-panel, button, progress bar, pop-up window, and page within the TRANSCRIPT.
+  - Objection handling system including specific objection pop-up windows and responses.
+  - Call disposition workflow with post-call actions (PDF export, email sending, cancellation, and reset procedures).
+  - Data field mappings for customer, roofing, insurance, and appointment information.
+  - Integration details for the ReadyMode API (login authentication and lead data retrieval).
+  - Aesthetic specifications: color scheme, fonts, panel titles, borders, button styling, progress bar design, and pop-up window design.
+  - Detailed content of PDF and email templates with dynamic placeholder mapping.
+- 1.3: Confirm that all functionalities (including error handling, input validation, and user interaction flows) are clearly understood.
+
+## Task 2: Application Structure and Packaging
+- 2.1: Develop a single, self-contained Python program file that includes:
+  - The complete GUI implementation.
+  - All event handlers and business logic.
+  - Integration with the ReadyMode API for authentication and lead search.
+  - Implementation of data population, progress tracking, and form validation.
+  - Implementation of PDF generation with preview, editing, and export features.
+  - Email generation and sending using GMAIL SMTP integration.
+- 2.2: Create a separate "requirements.txt" file listing all Python dependencies.
+- 2.3: Ensure that an "assets" folder exists in the same directory, containing the two image files:
+  - storm911.png (Title logo)
+  - assurecall.png (Company logo)
+
+## Task 3: GUI Implementation Details
+- 3.1: Splash Screen & Loading Process
+  - Display a splash screen for 1.5 seconds featuring the "storm911.png" and "assurecall.png" images (centered on a dark blue/grey background).
+  - Transition automatically to the ReadyMode login screen.
+- 3.2: ReadyMode Login Screen
+  - Create input fields for "USER" and "PASS" with clear labels.
+  - Implement a "LOGIN" button that, on click, calls the ReadyMode Search Lead API using a dummy phone number.
+  - Process the API response to:
+    - Save valid credentials.
+    - Display a success message and transition to the main GUI.
+    - Display an error message if the credentials are invalid and remain on the login screen.
+- 3.3: Main GUI Layout
+  - Design a three-panel layout:
+    - Left Panel (CALLER DATA & INFO):
+      - Include sub-panels for phone number search, Customer Information, Roofing Information, and Insurance/Appointment Information.
+      - Implement a dynamic progress bar that updates as data fields are filled.
+    - Center Panel (TRANSCRIPT):
+      - Include a Start Screen with a “Welcome” message and a “START” button.
+      - Implement 22 script pages with detailed text (titles, content, highlighted instructions) and navigation buttons (Previous, Next, End Call, Reset).
+      - Include a progress bar reflecting script navigation progress.
+    - Right Panel (OBJECTIONS):
+      - Create two columns (Group 1 and Group 2) with buttons that trigger objection pop-up windows.
+- 3.4: Pop-up Windows and Confirmation Dialogs
+  - Implement pop-up windows for objection responses with a “Close” button.
+  - Create confirmation pop-ups for critical actions (e.g., End Call, Reset) with YES/NO options.
+  - Develop the Call Disposition pop-up:
+    - List all disposition options.
+    - Include post-call action buttons: EXPORT PDF, SEND EMAIL, CANCEL, RESET.
+- 3.5: PDF and Email Functionality
+  - For EXPORT PDF:
+    - Present a selection of 4 PDF templates.
+    - Dynamically replace all placeholders in the template with corresponding data.
+    - Provide a preview window with editing capabilities.
+    - Enable exporting the finalized PDF to an "EXPORTS" folder.
+  - For SEND EMAIL:
+    - Present a selection of 4 email templates (matching the PDF templates).
+    - Dynamically populate the email template.
+    - Provide an email preview window allowing edits to recipient, subject, and body.
+    - Send the email via GMAIL SMTP to the pre-defined address ("softwaredevmanager@assurecall.com").
+    
+## Task 4: Data Handling, Validation, and API Integration
+- 4.1: Ensure robust data entry, real-time form validation (checking for required fields, correct formats for email, phone number, and zip code), and error handling.
+- 4.2: Map API response data to the appropriate fields in the CALLER DATA & INFO panel, following the detailed mapping as specified.
+- 4.3: Implement error handling for:
+  - Login failures.
+  - API data retrieval issues.
+  - PDF generation errors.
+  - Email sending failures.
+
+## Task 5: Aesthetic and Visual Requirements
+- 5.1: Apply the specified color scheme:
+  - Primary Blue, Success Green, Error Red, Neutral Greys, and Warning Yellow.
+- 5.2: Style panel titles with larger font sizes, bold text, title bars with contrasting background colors, borders, and rounded corners.
+- 5.3: Use a professional sans-serif font consistently across the application (e.g., Arial, Helvetica, Roboto).
+- 5.4: Design progress bars with smooth animation, clear percentage display, and modern aesthetics.
+- 5.5: Ensure all buttons have consistent styling with rounded corners, proper padding, hover effects, and clear color coding.
+- 5.6: Style all pop-up windows uniformly with modal overlays, rounded corners, subtle box shadows, and clear close/cancellation functionality.
+
+## Task 6: Extensive Research and Documentation Integration
+- 6.1: Perform comprehensive internet research (minimum 100+ sources) to gather:
+  - Best practices in Python GUI development.
+  - Sample code and documentation for integrating with RESTful APIs.
+  - Libraries and methods for PDF generation and editing.
+  - Techniques for sending emails via SMTP with error handling.
+- 6.2: Integrate insights and proven techniques from this research into the codebase to ensure a robust, efficient, and commercially viable application.
+- 6.3: Document any non-standard or innovative techniques used for future reference.
+
+## Task 7: Testing, Validation, and Finalization
+- 7.1: Ensure that the final Python program is fully functional and error-free.
+- 7.2: Run thorough testing on each feature:
+  - GUI responsiveness.
+  - API login and lead search.
+  - Data population and form validation.
+  - Navigation through script pages.
+  - Objection handling pop-ups.
+  - Call Disposition workflow.
+  - PDF generation and email sending.
+- 7.3: Validate that all user interface elements (buttons, labels, progress bars, pop-ups) are consistent with the provided aesthetic guidelines.
+- 7.4: Confirm that the entire application is packaged as:
+  - A single Python file.
+  - A "requirements.txt" file listing all dependencies.
+  - An "assets" folder with "storm911.png" and "assurecall.png".
+
+## Task 8: Final Output Delivery
+- 8.1: Export the entire final instructions, code, and necessary files in a format that allows for direct copy-paste and execution.
+- 8.2: Ensure that the output is a complete, self-contained package ready for commercial use.
+- 8.3: If any part of the process exceeds the character or context limit, notify with the specified warning and await confirmation before continuing.
+
+################################################################################
+# END OF INSTRUCTIONS
+################################################################################
+
+################################################################################
+# Program Overview Report: Storm911 Application
+################################################################################
+
+**Table of Contents**
+
+1.  **Summary**
+2.  **Splash Screen and Loading Process**
+3.  **ReadyMode Login Screen**
+4.  **Main GUI Layout and Structure**
+    *   4.1. Top Section: Title and Logo
+    *   4.2. Left Panel: CALLER DATA & INFO
+        *   4.2.1. Phone Number Search Sub-Panel
+        *   4.2.2. Customer Information Sub-Section
+        *   4.2.3. Roofing Information Sub-Section
+        *   4.2.4. Insurance and Appointment Information Sub-Section
+        *   4.2.5. CALLER DATA & INFO Progress Bar
+    *   4.3. Center Panel: TRANSCRIPT
+        *   4.3.1. Start Screen
+        *   4.3.2. Script Pages (Page 1 - Page 22)
+        *   4.3.3. Navigation Buttons (Previous, Next, End Call, Reset)
+        *   4.3.4. TRANSCRIPT Progress Bar
+    *   4.4. Right Panel: OBJECTIONS
+        *   4.4.1. Objection Columns (Group 1, Group 2)
+        *   4.4.2. Objection Buttons and Pop-up Windows
+    *   4.5. Pop-up Windows (General)
+        *   4.5.1. Objection Pop-up Windows
+        *   4.5.2. Confirmation Pop-up Windows (End Call, Reset, Form Submission)
+        *   4.5.3. Call Disposition Pop-up Window
+            *   4.5.3.1. Call Disposition Options
+            *   4.5.3.2. Post-Disposition Actions (EXPORT PDF, SEND EMAIL, CANCEL, RESET)
+                *   4.5.3.2.1. PDF Export Functionality
+                *   4.5.3.2.2. Email Send Functionality
+                *   4.5.3.2.3. PDF Templates
+5.  **Processes and Workflow**
+    *   5.1. Application Startup and Splash Screen
+    *   5.2. ReadyMode Login Process
+    *   5.3. Main GUI Initialization
+    *   5.4. Lead Data Search and Population
+    *   5.5. Transcript Navigation and Interaction
+    *   5.6. Objection Handling
+    *   5.7. Data Entry and Validation
+    *   5.8. Call Disposition and Post-Call Actions
+    *   5.9. PDF Generation and Export
+    *   5.10. Email Sending
+    *   5.11. Reset Functionality
+    *   5.12. End Call Functionality
+6.  **Capabilities and Functionalities**
+    *   6.1. ReadyMode API Integration
+        *   6.1.1. Login Authentication
+        *   6.1.2. Lead Search and Data Retrieval
+    *   6.2. Dynamic Script Display and Navigation
+    *   6.3. Objection Handling and Responses
+    *   6.4. Data Entry and Management
+    *   6.5. Progress Tracking
+    *   6.6. Call Disposition and Reporting
+    *   6.7. PDF Export
+    *   6.8. Email Communication
+    *   6.9. User Interface and Aesthetics
+7.  **GUI Aesthetics and Visual Details**
+    *   7.1. Color Scheme
+    *   7.2. Panel Titles and Borders
+    *   7.3. Fonts and Text Styling
+    *   7.4. Images and Logos
+    *   7.5. Splash Screen and Loading Screen
+    *   7.6. Progress Bars Visuals
+    *   7.7. Button Aesthetics
+    *   7.8. Pop-up Window Aesthetics
+8.  **Detailed Page and Button Descriptions (TRANSCRIPT Panel)**
+    *   8.1. START Page (**Welcome to the Storm911 21 Second Pitch**)
+    *   8.2. Page 1 (**THE HOOK - 8.25 SECONDS**)
+    *   8.3. Page 2 (**INTRODUCTION AND APPOINTMENT SETTING**)
+    *   8.4. Page 3 (**THE INSPECTION PROCESS**)
+    *   8.5. Page 4 (**THE INSPECTION PROCESS**)
+    *   8.6. Page 5 (**HOME STORY QUESTION**)
+    *   8.7. Page 6 (**INSPECTION PROCESS CONTINUED**)
+    *   8.8. Page 7 (**ROOFING TYPE QUESTION**)
+    *   8.9. Page 8 (**INSPECTION PROCESS CONTINUED**)
+    *   8.10. Page 9 (**CONTINUED INSPECTION QUESTIONS**)
+    *   8.11. Page 10 (**QUESTION: A LOT OF YOUR NEIGHBORS I HAVE SPOKEN TO...**)
+    *   8.12. Page 11 (**INSPECTION PROCESS CONTINUED**)
+    *   8.13. Page 12 (**IF THEY FIND NO DAMAGES**)
+    *   8.14. Page 13 (**NIRC REPORT**)
+    *   8.15. Page 14 (**CONFIRM EMAIL**)
+    *   8.16. Page 15 (**ROOF LEAK AND HOMEOWNER CONFIRMATION**)
+    *   8.17. Page 16 (**CLOSING THE APPOINTMENT – NAME CONFIRMATION**)
+    *   8.18. Page 17 (**CLOSING THE APPOINTMENT – ADDRESS CONFIRMATION**)
+    *   8.19. Page 18 (**CLOSING THE APPOINTMENT – CONTRACT & OWNER CONFIRMATION**)
+    *   8.20. Page 19 (**CLOSING THE APPOINTMENT – NO OTHER CONTRACT**)
+    *   8.21. Page 20 (**CLOSING THE APPOINTMENT – SCHEDULE CONFIRMATION**)
+    *   8.22. Page 21 (**FINAL CLOSING AND REFERRALS**)
+    *   8.23. Page 22 (**ASK FOR THE SALE DO NOT WIMP OUT**)
+9.  **Detailed Objection Button Descriptions (OBJECTIONS Panel)**
+    *   9.1. Group 1 Objection Buttons
+    *   9.2. Group 2 Objection Buttons
+10. **Detailed Objection Pop-up Window Descriptions**
+    *   10.1. I Don't Have Time Objection
+    *   10.2. I Am Not Interested Objection
+    *   10.3. Asking for an Opportunity To Earn Your Business
+    *   10.4. NOT QUALIFIED ROOF AGE
+    *   10.5. Which Neighbors are you Inspecting
+    *   10.6. Not Interested Closer
+    *   10.7. alreadyInspected
+    *   10.8. No Damage Objection
+    *   10.9. No Damage Metal Roof Objection
+    *   10.10. No Damage Metal Roof Age
+    *   10.11. Did Not Give Property Owners Name
+    *   10.12. They Are The Property Owner
+    *   10.13. Insurance Already Did Inspection Objection
+    *   10.14. Why Can't I Call You Objection
+    *   10.15. Selling My Home Objection
+    *   10.16. My Claim Was Denied Objection
+    *   10.17. Who Is The NIRC Objection
+    *   10.18. Why Do You Need My Email Objection
+    *   10.19. They Gave New Email Address
+    *   10.20. Did Not Give A New Email Address
+    *   10.21. I Had a Bad Experience with Contractors In The Past
+    *   10.22. Does Not Have insurance Objection
+    *   10.23. No Contractor Taking "No Insurance Appointments"
+    *   10.24. No Insurance Have A Contractor
+    *   10.25. noDecision
+    *   10.26. thirtySecondObjection
+    *   10.27. yesRoofLeak
+    *   10.28. noRoofLeak
+    *   10.29. notOwner
+    *   10.30. hasAContractor
+    *   10.31. nameInsuranceYes
+    *   10.32. nameInsurancNo
+    *   10.33. noContractor
+    *   10.34. nothingIsForFree
+    *   10.35. myNumber
+    *   10.36. failed
+    *   10.37. spamObjection
+    *   10.38. failResponse
+    *   10.39. dontHaveInfo
+    *   10.40. 1to4ShinglesAndCedar
+    *   10.41. referralater
+    *   10.42. alreadyInspectedYes
+    *   10.43. alreadyInspectedNo
+	*   10.44. I Am Selling My Home Objection
+11. **Call Disposition Pop-up Window Details**
+    *   11.1. Call Disposition Options (Detailed Descriptions)
+    *   11.2. EXPORT PDF Functionality (Detailed Description)
+    *   11.3. SEND EMAIL Functionality (Detailed Description)
+    *   11.4. PDF Templates (Full Content)
+12. **Data Flow and Variable Mapping**
+    *   12.1. Data Fields in CALLER DATA & INFO Panel
+    *   12.2. ReadyMode API Parameters Mapping
+    *   12.3. PDF Template Variable Mapping
+    *   12.4. Email Template Variable Mapping
+13. **Error Handling and Validation**
+    *   13.1. Login Error Handling
+    *   13.2. Lead Search Error Handling
+    *   13.3. Form Validation
+    *   13.4. Email Sending Error Handling
+    *   13.5. PDF Export Error Handling
+14. **Future Enhancements and Considerations**
+
+---
+
+**1. Summary**
+
+This document provides a comprehensive plaintext overview of the Storm911 21 Second Pitch application, originally designed in HTML. The application is intended to be a telemarketing call scripting/transcript and data entry tool for agents making outbound calls to schedule roofing inspections. The overview details the intended functionality of the application, including its GUI layout, call script, objection handling system, data entry forms, and post-call actions such as PDF export and email sending. This report addresses issues and incompleteness found in the original HTML code and incorporates new features and improvements to ensure the development of a fully functional and commercially viable Python-based application. The application will feature a ReadyMode login, lead data integration via the ReadyMode API, dynamic call scripting, a robust objection handling system, and streamlined post-call processes. The GUI will be designed to be aesthetically pleasing and professional, enhancing user experience and agent efficiency.
+
+---
+
+**2. Splash Screen and Loading Process**
+
+Upon launching the application, a splash screen will be displayed for 1.5 seconds. This splash screen will be visually appealing and professional, featuring two transparent PNG images centered on the screen. The top image will be "storm911.png", the title logo, and directly beneath it will be "assurecall.png", the company logo. Both images are located in the "assets" folder in the base directory of the application.  The background of the splash screen can be a solid color, preferably a dark blue or grey, to make the transparent logos stand out. After 1.5 seconds, the splash screen will automatically transition to the ReadyMode login screen. This initial visual presentation aims to create a positive first impression and brand recognition.
+
+---
+
+**3. ReadyMode Login Screen**
+
+Following the splash screen, the application will present a ReadyMode login screen. This screen is essential for authenticating agents and connecting to the ReadyMode API. The login screen will feature fields for "USER" and "PASS" (labels above input fields), prompting the agent to enter their ReadyMode username and password. Below these fields, a "LOGIN" button will be prominently displayed.
+
+Upon clicking the "LOGIN" button, the application will attempt to authenticate the provided credentials against the ReadyMode API. This will be done by using one of the ReadyMode Get/Search APIs, specifically the Search Lead endpoint, and passing the entered "USER" and "PASS" as API_user and API_pass query parameters, respectively. A dummy phone number (e.g., "0000000000") will be used as the `phoneNumber` parameter in the API call to simply verify the login credentials without searching for a specific lead. The API call will be structured as: `https://roofingappointments.readymode.com/TPI/search/Lead/0000000000?API_user=[entered USER]&API_pass=[entered PASS]`.
+
+If the ReadyMode API returns a successful response (indicating valid credentials), the application will:
+
+*   Save the entered "USER" and "PASS" securely for subsequent API calls during the application session. These will be used as `API_user` and `API_pass` for lead data retrieval.
+*   Display a success message to the user, such as "Login Successful!". This message should be visually clear and can be displayed in a pop-up or a designated area on the login screen.
+*   Automatically transition to the main GUI window/menu of the application.
+
+If the ReadyMode API returns an error response (indicating invalid credentials), the application will:
+
+*   Display an error message to the user, such as "Incorrect Username or Password. Please try again." This message should be clear and informative, guiding the user to re-enter their credentials.
+*   Keep the user on the login screen, allowing them to attempt login again.
+
+The login screen should be designed with a professional and clean aesthetic, consistent with the overall application's visual style. It should be user-friendly and easy to navigate.
+
+---
+
+**4. Main GUI Layout and Structure**
+
+The main GUI of the Storm911 application is designed with a three-panel layout to optimize workflow and information access for agents. The GUI will be visually appealing, professional, and easy to navigate, incorporating modern GUI design principles. The primary color scheme will be based on the existing colors in the HTML (blue, green, red, grey) but enhanced to be more vibrant and commercially appealing.
+
+**4.1. Top Section: Title and Logo**
+
+At the very top of the GUI, spanning the entire width, a header section will be present. On the top left corner of this header, the transparent "assurecall.png" logo will be positioned. Centered in the header section, the transparent "storm911.png" title image will be displayed prominently. This header section will provide branding and application identification at a glance. The background color of the header can be a slightly darker shade of the main background color to create a subtle visual separation.
+
+**4.2. Left Panel: CALLER DATA & INFO**
+
+The left panel, occupying approximately 20% of the GUI width, is dedicated to displaying and managing caller data and appointment information. The title of this panel, prominently displayed at the top with enhanced aesthetics (as described in section 7.2), will be "CALLER DATA & INFO". This panel is crucial for agents to quickly access and update lead information during calls.
+
+**4.2.1. Phone Number Search Sub-Panel**
+
+At the very top of the "CALLER DATA & INFO" panel, a small sub-panel will be integrated for phone number-based lead searching. This sub-panel will contain:
+
+*   A text input field labeled "Phone Number:" where the agent can enter a phone number.
+*   A button labeled "SEARCH/LOAD" positioned next to the input field.
+
+When the agent enters a phone number and clicks the "SEARCH/LOAD" button, the application will:
+
+1.  Use the ReadyMode API "SEARCH" lead endpoint to search for leads associated with the entered phone number. The API call will use the `API_user` and `API_pass` acquired during the login process. The API call will be: `https://roofingappointments.readymode.com/TPI/search/Lead/[entered phone number]?API_user=[saved API_user]&API_pass=[saved API_pass]`.
+2.  Process the JSON response from the ReadyMode API.
+3.  If a lead is found (API returns lead data):
+    *   Display a pop-up window prompting the user with the option to "POPULATE DATA". This pop-up should have "YES" and "NO" buttons.
+    *   If the agent clicks "YES", the application will automatically populate the fields in the "CALLER DATA & INFO" panel with the corresponding data from the retrieved lead. The data mapping from the API response to the panel fields is detailed in section 12.2.
+    *   If the agent clicks "NO" or closes the pop-up, no data population will occur, and the panel will remain as is.
+4.  If no lead is found (API returns no lead data or an error indicating no lead found):
+    *   Display a message to the user, such as "No lead found for this phone number." This message can be displayed in a small pop-up or below the search sub-panel.
+
+**4.2.2. Customer Information Sub-Section**
+
+Below the phone number search sub-panel, the "CALLER DATA & INFO" panel will be divided into three clear sub-sections, visually separated by lines or borders and with clear sub-titles. The first sub-section is "Customer Information" and will contain the following fields in the specified order:
+
+*   **Customer's Name:** Text input field, label "Customer's Name:". Placeholder "Enter Customer's Name".
+*   **Address:** Text input field, label "Address:". Placeholder "Enter Address".
+*   **City:** Text input field, label "City:". Placeholder "Enter City".
+*   **State:** Text input field, label "State:". Placeholder "Enter State".
+*   **Zip Code:** Text input field, label "Zip Code:". Placeholder "Enter Zip Code".
+*   **Phone Number:** Text input field, label "Phone Number:". Placeholder "Enter Phone Number".
+*   **Cell Number:** Text input field, label "Cell Number:". Placeholder "Enter Cell Number".
+*   **Email:** Text input field, label "Email:". Placeholder "Enter Email".
+
+**4.2.3. Roofing Information Sub-Section**
+
+The second sub-section in the "CALLER DATA & INFO" panel is "Roofing Information" and will contain the following dropdown/selection fields:
+
+*   **How Many Stories:** Dropdown selection, label "How Many Stories:". Options: "Select Roof Stories", "1 Story", "1.5 Stories", "2 Stories".
+*   **Roof Age:** Dropdown selection, label "Roof Age:". Options: "Select Roof Age", "1-4 Years", "5-9 Years", "10+ Years".
+*   **Roofing Type:** Dropdown selection, label "Roofing Type:". Options: "Select Roofing Type", "Shingles", "Metal", "Tile", "Cedar Shake".
+
+**4.2.4. Insurance and Appointment Information Sub-Section**
+
+The third sub-section in the "CALLER DATA & INFO" panel is "Insurance and Appointment Information" and will contain the following fields:
+
+*   **Do You Have Homeowners Insurance?:** Dropdown selection, label "Do You Have Homeowners Insurance?". Options: "Select Response", "Yes", "No".
+*   **Insurance Company Name:** Text input field, label "Insurance Company Name:". Placeholder "Enter Insurance Company Name". This field should be disabled by default and only enabled if "Yes" is selected for "Do You Have Homeowners Insurance?".
+*   **Are you the homeowner or decision maker?:** Dropdown selection, label "Are you the homeowner or decision maker?". Options: "Select Response", "Yes", "No".
+*   **You Don't Have A Contractor Currently?:** Dropdown selection, label "You Don't Have A Contractor Currently?". Options: "Select response", "Yes", "No".
+*   **Appointment Date:** Date input field, label "Appointment Date:". Format mm/dd/yyyy.
+*   **Appointment Time:** Dropdown selection, label "Appointment Time:". Options: "Select Appointment Time", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM". This field should be disabled until an Appointment Date is selected.
+
+**4.2.5. CALLER DATA & INFO Progress Bar**
+
+At the bottom of the "CALLER DATA & INFO" panel, a progress bar will be implemented to visually indicate the completion status of data entry in this panel. The progress bar will:
+
+*   Track the number of filled data fields out of the total number of data fields in the "CALLER DATA & INFO" panel.
+*   Visually fill up as more fields are completed.
+*   Display a percentage complete value in the center of the progress bar, e.g., "30% Completed".
+*   Update dynamically as the agent enters or selects data in the panel.
+
+**4.3. Center Panel: TRANSCRIPT**
+
+The center panel, occupying approximately 40% of the GUI width, is the "TRANSCRIPT" panel. This panel displays the call script and guides the agent through the call flow. The title of this panel, prominently displayed at the top with enhanced aesthetics, will be "TRANSCRIPT".
+
+**4.3.1. Start Screen**
+
+Initially, when the application loads or after a "RESET" action, the "TRANSCRIPT" panel will display a "Start Screen". This screen will contain:
+
+*   A centered title: "Welcome to the Storm911 21 Second Pitch".
+*   A paragraph below the title: "Click Below To Begin The Process."
+*   A prominent "START" button (green button) below the paragraph.
+
+Clicking the "START" button will hide the "Start Screen" and load the first page of the call script (Page 1).
+
+**4.3.2. Script Pages (Page 1 - Page 22)**
+
+The call script is divided into 22 pages (corrected page numbering from HTML, which had inconsistencies and repetitions). Each page of the script will be displayed within the "TRANSCRIPT" panel after the "Start Screen" is dismissed.  Each page will contain:
+
+*   A page title, often indicating the section of the call (e.g., "THE HOOK", "INTRODUCTION AND APPOINTMENT SETTING", "THE INSPECTION PROCESS", "CLOSING THE APPOINTMENT", "FINAL CLOSING AND REFERRALS"). These titles will be styled with blue color and bold font.
+*   The script text for that page, including questions for the agent to ask, instructions, and pauses. Key phrases like "PAUSE AND WAIT FOR A RESPONSE!!!" will be highlighted in red and bold.
+*   Buttons relevant to the current script page. These buttons can be navigation buttons (Next, Previous, End Call, Reset) or objection buttons that trigger objection pop-up windows. The specific buttons for each page are detailed in section 8.
+
+**4.3.3. Navigation Buttons (Previous, Next, End Call, Reset)**
+
+Below the script content on each page (except the Start Screen), a set of navigation buttons will be present:
+
+*   **Previous:** (Grey button, label "Previous"). Navigates to the previous script page. Disabled on the first script page (Page 1).
+*   **Next:** (Grey button, label "Next"). Navigates to the next script page. Disabled on the last script page (Page 22).
+*   **End Call:** (Red button, label "END CALL"). Triggers the "END CALL" process, including confirmation pop-up and Call Disposition window (detailed in section 4.5.2 and 4.5.3).
+*   **Reset:** (Light Grey button, label "RESET"). Triggers the "RESET" process, including confirmation pop-up and resetting the application state (detailed in section 4.5.2 and 5.11).
+
+**4.3.4. TRANSCRIPT Progress Bar**
+
+At the bottom of the "TRANSCRIPT" panel, a progress bar will be implemented to visually indicate the agent's progress through the call script. The progress bar will:
+
+*   Track the current script page number out of the total number of script pages (22).
+*   Visually fill up as the agent navigates through the script pages using the "Next" button.
+*   Display a percentage complete value in the center of the progress bar, e.g., "50% Completed".
+*   Update dynamically as the agent moves between script pages.
+
+**4.4. Right Panel: OBJECTIONS**
+
+The right panel, occupying approximately 40% of the GUI width, is the "OBJECTIONS" panel. This panel provides agents with quick access to responses for common objections raised by prospects during calls. The title of this panel, prominently displayed at the top with enhanced aesthetics, will be "OBJECTIONS".
+
+**4.4.1. Objection Columns (Group 1, Group 2)**
+
+The "OBJECTIONS" panel is divided into two columns, "Group 1" and "Group 2", each occupying roughly half of the panel width. Each column will have a title ("Group 1", "Group 2") at the top, styled with enhanced aesthetics. Within each column, objection buttons are arranged vertically.
+
+*   **Group 1:** Contains a set of objection buttons related to common initial objections or general concerns.
+*   **Group 2:** Contains another set of objection buttons, potentially addressing more specific or follow-up objections.
+
+The specific objection buttons in each group are listed in section 9.
+
+**4.4.2. Objection Buttons and Pop-up Windows**
+
+Each button in the "OBJECTIONS" panel represents a specific objection. Clicking an objection button will:
+
+1.  Trigger a pop-up window (objection pop-up window) containing a pre-written response to the selected objection.
+2.  The content of the pop-up window will be the corresponding objection response text, as defined in section 10.
+3.  The pop-up window will have a "Close" button to dismiss it and return to the main GUI.
+
+The objection buttons are designed to provide agents with immediate access to effective responses, helping them handle objections smoothly and maintain call flow.
+
+**4.5. Pop-up Windows (General)**
+
+The application utilizes pop-up windows for various purposes, including displaying objection responses, confirmation messages, and call disposition options. All pop-up windows share a consistent visual style and behavior.
+
+**4.5.1. Objection Pop-up Windows**
+
+These pop-up windows are triggered by clicking objection buttons in the "OBJECTIONS" panel. They display pre-written responses to common objections. Each objection pop-up window will contain:
+
+*   The objection response text, clearly formatted and easy to read.
+*   A "Close" button (typically a green "Close" button) to dismiss the pop-up.
+
+**4.5.2. Confirmation Pop-up Windows (End Call, Reset)**
+
+Confirmation pop-up windows are used to confirm critical actions like "END CALL" and "RESET" to prevent accidental execution. These pop-ups are triggered by clicking the "END CALL" or "RESET" buttons in the "TRANSCRIPT" panel.
+
+*   **"END CALL" Confirmation Pop-up:**
+    *   Title: "Confirm End Call"
+    *   Message: "Are you sure you want to END CALL?"
+    *   Buttons: "YES" (Green button, proceeds with END CALL process), "NO" (Red button, closes pop-up and cancels END CALL action).
+*   **"RESET" Confirmation Pop-up:**
+    *   Title: "Confirm Reset"
+    *   Message: "Are you sure you want to RESET?"
+    *   Buttons: "YES" (Green button, proceeds with RESET process), "NO" (Red button, closes pop-up and cancels RESET action).
+
+**4.5.3. Call Disposition Pop-up Window**
+
+The "CALL DISPOSITION" pop-up window is presented after the agent confirms "END CALL" or "RESET" (by clicking "YES" in the confirmation pop-up). This window is crucial for categorizing call outcomes and initiating post-call actions.
+
+**4.5.3.1. Call Disposition Options**
+
+The top section of the "CALL DISPOSITION" pop-up window will contain a list of call disposition options for the agent to select from. These options are presented as selectable buttons or a dropdown list. The available options are:
+
+*   ➤ Not Qualified Roof Age (NQ-Roof Age)
+*   ➤ Not Qualified Not Owner (NQ-Not Property Owner)
+*   ➤ No Insurance (2025 DENIED)
+*   ➤ Not Qualified Contractor (2025 DENIED)
+*   ➤ Not Qualifiued Has Contractor (NQ-Has Contractor)
+*   ➤ Not Available (Not Available)
+    *   ➤ Not Interested (Not Interested)
+    *   ➤ Bad Info (NQ-Bad Info)
+    *   ➤ Wrong Number (Wrong Number)
+    *   ➤ Call Back (Call Back)
+
+After selecting a disposition option, the agent must click a "SUBMIT" button (Green button) to proceed.
+
+**4.5.3.2. Post-Disposition Actions (EXPORT PDF, SEND EMAIL, CANCEL, RESET)**
+
+The bottom section of the "CALL DISPOSITION" pop-up window, visually separated from the disposition options, will provide buttons for post-call actions:
+
+*   **EXPORT PDF:** (Blue button, label "EXPORT PDF"). Triggers the PDF export functionality (detailed in section 4.5.3.2.1).
+*   **SEND EMAIL:** (Yellow button, label "SEND EMAIL"). Triggers the email sending functionality (detailed in section 4.5.3.2.2).
+*   **CANCEL:** (Red button, label "CANCEL"). Closes the "CALL DISPOSITION" pop-up window without performing any post-call actions or changing the lead data. It will ask for confirmation "Are you sure you want to CANCEL?" with "YES" and "NO" buttons. If "YES", the pop-up closes.
+*   **RESET:** (Light Grey button, label "RESET"). Resets the lead data in the "CALLER DATA & INFO" panel, returns the "TRANSCRIPT" to the "START" page, and closes the "CALL DISPOSITION" pop-up. It will ask for confirmation "Are you sure you want to RESET?" with "YES" and "NO" buttons. If "YES", the reset action is performed.
+
+**4.5.3.2.1. PDF Export Functionality**
+
+Clicking the "EXPORT PDF" button in the "CALL DISPOSITION" window will:
+
+1.  Present the user with a selection of 4 PDF templates (listed in section 4.5.3.2.3). These templates will be displayed as selectable buttons or a dropdown list with template names.
+2.  Upon selecting a template, the application will:
+    *   Generate a PDF document using the selected template.
+    *   Automatically populate the PDF template fields with the data currently in the "CALLER DATA & INFO" panel. The data mapping for PDF templates is detailed in section 12.3.
+    *   Display a preview of the generated PDF to the agent in a new window or panel.
+    *   Allow the agent to edit any of the fields/data directly within the PDF preview.
+3.  In the PDF preview window, the following buttons will be available:
+    *   **EXPORT:** (Green button, label "EXPORT"). Exports the currently previewed (and potentially edited) PDF document to the "EXPORTS" folder located in the same directory as the main application file. After export, a confirmation message like "PDF Exported Successfully to EXPORTS folder" should be displayed.
+    *   **BACK:** (Grey button, label "BACK"). Closes the PDF preview window and returns the agent to the "CALL DISPOSITION" window with the post-action buttons.
+
+**4.5.3.2.2. Email Send Functionality**
+
+Clicking the "SEND EMAIL" button in the "CALL DISPOSITION" window will:
+
+1.  Present the user with a selection of the same 4 email templates as used for PDF export (listed in section 4.5.3.2.3). These templates will be displayed as selectable buttons or a dropdown list with template names.
+2.  Upon selecting a template, the application will:
+    *   Generate an email body using the selected template.
+    *   Automatically populate the email template fields with the data currently in the "CALLER DATA & INFO" panel. The data mapping for email templates is the same as for PDF templates (section 12.3).
+    *   Display a preview of the generated email in a new window or panel, showing the recipient (pre-filled as "softwaredevmanager@assurecall.com"), subject (can be template-specific or a default subject), and email body.
+    *   Allow the agent to edit any of the fields/data directly within the email preview, including the recipient, subject, and body.
+3.  In the email preview window, the following buttons will be available:
+    *   **SEND:** (Green button, label "SEND"). Sends the currently previewed (and potentially edited) email to "softwaredevmanager@assurecall.com" using the specified GMAIL SMTP settings (provided in the prompt). After sending, a confirmation message like "Email Sent Successfully" should be displayed.
+    *   **BACK:** (Grey button, label "BACK"). Closes the email preview window and returns the agent to the "CALL DISPOSITION" window with the post-action buttons.
+
+**4.5.3.2.3. PDF Templates**
+
+The application will utilize the following 4 PDF templates, which are also used as email templates. These templates are plain text files (.txt) and need to be parsed and formatted correctly for PDF and email generation. The templates are:
+
+*   **"Appointment Set-Review.txt"**:
+    ```
+    RESIDENTIAL QUALITY CONTROL NOTES:
+     
+    The Storm911-NIRC Agent introduced themselves and (Lead.campaign), explaining the 7-point inspection process. They discussed how (Lead.campaign) can support (Profile.First Name) (Profile.Last Name) with restoration needs resulting from the storm damage to their roof and property.
+
+    Confirmed Property Owner: (Profile.First Name),  (Profile.Last Name) 
+    Street Address:  (Profile.Address)
+    City:  (Profile.City)
+    State:  (Profile.State)
+    Zip Code:  (Profile.Zip Code)
+    Contact Number:  (Profile.Phone Number)
+    Cell Number: (Profile.Cell Phone)
+
+    Property Type: Single-Family Home
+    Insurance on Property:  (Profile.Has Insurance)
+    Insurance Company:  (Profile. Insurance Co. Name)
+    Email:  (Profile.Email)
+
+    Roof Type:   (Profile.Roof Type)
+    Roof Age:  (Profile.Roof Age)
+    Roof Story: (Profile.How Many Stories is House)
+    Contract:  No signed contract with any other roofing or construction company
+
+
+    Agent Notes: (Profile.Call Notes)
+
+    Appointment Date:  (Profile.Appointment Time.Date)  Time:  (Profile.Appointment Time.Time)
+    Appointment Confirmed: (Profile.Appointment Confirmed)
+
+    Storm911 Office: 888-856-4540
+    Accounts Department: sales@storm911.com
+    Credits Department Email:  credits@storm911.com
+
+    Please remember that all credit requests must be emailed to credits@storm911.com within 48 hours (calendar days to include weekends and holidays) of the appointment date. Your account will receive a temporary credit while our Quality Control department reviews your request. If the credit is approved, your account will be adjusted accordingly. By accepting this appointment, the client agrees to the Terms of Use and Credit Policy available at www.storm911.com, and agrees that no chargebacks will be initiated related to this transaction.
+    ```
+
+*   **"Approved Appointment.txt"**:
+    ```
+    RESIDENTIAL QUALITY CONTROL NOTES:
+     
+    The Storm911-NIRC Agent introduced themselves and (Lead.campaign), explaining the 7-point inspection process. They discussed how (Lead.campaign) can support (Profile.First Name) (Profile.Last Name) with restoration needs resulting from the storm damage to their roof and property.
+
+    Confirmed Property Owner: (Profile.First Name),  (Profile.Last Name) 
+    Street Address:  (Profile.Address)
+    City:  (Profile.City)
+    State:  (Profile.State)
+    Zip Code:  (Profile.Zip Code)
+    Contact Number:  (Profile.Phone Number)
+    Cell Number: (Profile.Cell Phone)
+
+    Property Type: Single-Family Home
+    Insurance on Property:  (Profile.Has Insurance)
+    Insurance Company:  (Profile. Insurance Co. Name)
+    Email:  (Profile.Email)
+
+    Roof Type:   (Profile.Roof Type)
+    Roof Age:  (Profile.Roof Age)
+    Roof Story: (Profile.How Many Stories is House)
+    Contract:  No signed contract with any other roofing or construction company
+
+
+    Agent Notes: (Profile.Call Notes)
+
+    Appointment Date:  (Profile.Appointment Time.Date)  Time:  (Profile.Appointment Time.Time)
+
+    Appointment Confirmed: (Profile.Appointment Confirmed)
+
+    Storm911 Office: 888-856-4540
+    Accounts Department: sales@storm911.com
+    Credits Department Email:  credits@storm911.com
+
+    Attachments: Hail Map, Hail History Report, Appointment Recording
+
+    Please remember that all credit requests must be emailed to credits@storm911.com within 48 hours (calendar days to include weekends and holidays) of the appointment date. Your account will receive a temporary credit while our Quality Control department reviews your request. If the credit is approved, your account will be adjusted accordingly. By accepting this appointment, the client agrees to the Terms of Use and Credit Policy
+    ```
+
+*   **"Confirmation Call Needed.txt"**:
+    ```
+    RESIDENTIAL QUALITY CONTROL NOTES:
+     
+    CONFIRMATION CALL NEEDED
+
+    Confirmed Property Owner: (Profile.First Name),  (Profile.Last Name) 
+    Street Address:  (Profile.Address)
+    City:  (Profile.City)
+    State:  (Profile.State)
+    Zip Code:  (Profile.Zip Code)
+    Contact Number:  (Profile.Phone Number)
+    Cell Number: (Profile.Cell Phone)
+
+    Property Type: Single-Family Home
+    Insurance on Property:  (Profile.Has Insurance)
+    Insurance Company:  (Profile. Insurance Co. Name)
+    Email:  (Profile.Email)
+
+    Roof Type:   (Profile.Roof Type)
+    Roof Age:  (Profile.Roof Age)
+    Roof Story: (Profile.How Many Stories is House)
+    Contract:  No signed contract with any other roofing or construction company
+
+
+    Agent Notes: (Profile.Call Notes)
+
+    Appointment Date:  (Profile.Appointment Time.Date)  Time:  (Profile.Appointment Time.Time)
+    Appointment Confirmed: (Profile.Appointment Confirmed)
+
+    Storm911 Office: 888-856-4540
+    Accounts Department: sales@storm911.com
+    Credits Department Email:  credits@storm911.com
+
+    Please remember that all credit requests must be emailed to credits@storm911.com within 48 hours (calendar days to include weekends and holidays) of the appointment date. Your account will receive a temporary credit while our Quality Control department reviews your request. If the credit is approved, your account will be adjusted accordingly. By accepting this appointment, the client agrees to the Terms of Use and Credit Policy available at www.storm911.com, and agrees that no chargebacks will be initiated related to this transaction.
+    ```
+
+*   **"Denied Appointment.txt"**:
+    ```
+    RESIDENTIAL QUALITY CONTROL NOTES:
+
+    APPOINTMENT DENIED PLEASE FIX AND RESUBMIT
+
+    Confirmed Property Owner: (Profile.First Name),  (Profile.Last Name) 
+    Street Address:  (Profile.Address)
+    City:  (Profile.City)
+    State:  (Profile.State)
+    Zip Code:  (Profile.Zip Code)
+    Contact Number:  (Profile.Phone Number)
+    Cell Number: (Profile.Cell Phone)
+
+    Property Type: Single-Family Home
+    Insurance on Property:  (Profile.Has Insurance)
+    Insurance Company:  (Profile. Insurance Co. Name)
+    Email:  (Profile.Email)
+
+    Roof Type:   (Profile.Roof Type)
+    Roof Age:  (Profile.Roof Age)
+    Roof Story: (Profile.How Many Stories is House)
+    Contract:  No signed contract with any other roofing or construction company
+
+
+    Agent Notes: (Profile.Call Notes)
+
+    Appointment Date:  (Profile.Appointment Time.Date)  Time:  (Profile.Appointment Time.Time)
+
+    Appointment Confirmed: (Profile.Appointment Confirmed)
+
+    Storm911 Office: 888-856-4540
+    Accounts Department: sales@storm911.com
+    Credits Department Email:  credits@storm911.com
+
+    Attachments: Hail Map, Hail History Report, Appointment Recording
+
+    Please remember that all credit requests must be emailed to credits@storm911.com within 48 hours (calendar days to include weekends and holidays) of the appointment date. Your account will receive a temporary credit while our Quality Control department reviews your request. If the credit is approved, your account will be adjusted accordingly. By accepting this appointment, the client agrees to the Terms of Use and Credit Policy
+    ```
+
+These templates contain placeholders like `(Lead.campaign)`, `(Profile.First Name)`, `(Profile.Last Name)`, `(Profile.Address)`, etc. These placeholders need to be dynamically replaced with the corresponding data from the "CALLER DATA & INFO" panel when generating PDFs and emails. The mapping of these placeholders to data fields is detailed in section 12.3.
+
+---
+
+**5. Processes and Workflow**
+
+The Storm911 application is designed to streamline the process of outbound calling for roofing appointment scheduling. The workflow is designed to be intuitive and efficient for agents.
+
+**5.1. Application Startup and Splash Screen**
+
+1.  The agent launches the Storm911 application.
+2.  The splash screen is displayed for 1.5 seconds, showcasing the "storm911.png" title logo and "assurecall.png" company logo.
+3.  After the splash screen duration, the application automatically transitions to the ReadyMode login screen.
+
+**5.2. ReadyMode Login Process**
+
+1.  The ReadyMode login screen is displayed.
+2.  The agent enters their ReadyMode username in the "USER" field.
+3.  The agent enters their ReadyMode password in the "PASS" field.
+4.  The agent clicks the "LOGIN" button.
+5.  The application attempts to authenticate the credentials against the ReadyMode API using the Search Lead endpoint with a dummy phone number.
+6.  If login is successful:
+    *   The application saves the `API_user` and `API_pass`.
+    *   A "Login Successful!" message is displayed.
+    *   The application proceeds to the main GUI window.
+7.  If login fails:
+    *   An "Incorrect Username or Password" message is displayed.
+    *   The agent remains on the login screen to retry.
+
+**5.3. Main GUI Initialization**
+
+1.  After successful login, the main GUI window is displayed.
+2.  The GUI is initialized with the three panels: "CALLER DATA & INFO" (left), "TRANSCRIPT" (center) with the "Start Screen" active, and "OBJECTIONS" (right).
+3.  Progress bars in "CALLER DATA & INFO" and "TRANSCRIPT" panels are initialized to 0%.
+4.  All data fields in the "CALLER DATA & INFO" panel are initially empty.
+
+**5.4. Lead Data Search and Population**
+
+1.  In the "CALLER DATA & INFO" panel, the agent enters a phone number into the "Phone Number:" input field in the search sub-panel.
+2.  The agent clicks the "SEARCH/LOAD" button.
+3.  The application queries the ReadyMode API "SEARCH" lead endpoint using the entered phone number and saved `API_user`/`API_pass`.
+4.  If a lead is found:
+    *   A "POPULATE DATA?" pop-up window is displayed.
+    *   If the agent clicks "YES":
+        *   The "CALLER DATA & INFO" panel fields are automatically populated with data from the API response.
+        *   The CALLER DATA & INFO progress bar updates accordingly.
+    *   If the agent clicks "NO" or closes the pop-up: No data population occurs.
+5.  If no lead is found:
+    *   A "No lead found for this phone number." message is displayed.
+
+**5.5. Transcript Navigation and Interaction**
+
+1.  Initially, the "TRANSCRIPT" panel displays the "Start Screen".
+2.  The agent clicks the "START" button to begin the call script.
+3.  Page 1 of the script is loaded into the "TRANSCRIPT" panel.
+4.  The agent reads the script text and follows the instructions.
+5.  To move through the script:
+    *   Click "Next" to advance to the next page.
+    *   Click "Previous" to go back to the previous page (disabled on Page 1).
+6.  The TRANSCRIPT progress bar updates as the agent navigates through the script pages.
+7.  At any point during the script, the agent can click "END CALL" or "RESET".
+
+**5.6. Objection Handling**
+
+1.  During the call, if the prospect raises an objection, the agent identifies the relevant objection.
+2.  The agent locates the corresponding objection button in the "OBJECTIONS" panel (Group 1 or Group 2).
+3.  The agent clicks the objection button.
+4.  An objection pop-up window appears, displaying the pre-written response to the objection.
+5.  The agent reads the response and uses it to address the prospect's objection and continue the call.
+6.  The agent clicks the "Close" button on the pop-up window to dismiss it.
+
+**5.7. Data Entry and Validation**
+
+1.  Throughout the call, as the agent gathers information from the prospect, they enter or select data in the fields of the "CALLER DATA & INFO" panel.
+2.  Data can be entered manually or automatically populated from ReadyMode lead search.
+3.  The CALLER DATA & INFO progress bar updates as fields are filled.
+4.  Before ending the call, the agent is expected to have filled in all required fields in the "CALLER DATA & INFO" panel.
+5.  Form validation is performed when the agent attempts to submit data (though the "Submit" button in the HTML is likely a placeholder and submission is handled differently in the intended workflow, primarily through PDF/Email generation after call disposition). Validation checks for:
+    *   Required fields being filled.
+    *   Valid email format.
+    *   Valid phone number format (10 digits).
+    *   Valid zip code format.
+6.  If validation fails, an alert message is displayed indicating the errors, and the agent is prompted to correct the data.
+
+**5.8. Call Disposition and Post-Call Actions**
+
+1.  When the agent clicks "END CALL" or "RESET" in the "TRANSCRIPT" panel, a confirmation pop-up is displayed ("Are you sure you want to END CALL?" or "Are you sure you want to RESET?").
+2.  If the agent clicks "YES" in the confirmation pop-up:
+    *   The "CALL DISPOSITION" pop-up window is displayed.
+    *   The agent selects a call disposition option from the list (e.g., "Not Qualified Roof Age", "Appointment Set").
+    *   The agent clicks the "SUBMIT" button in the "CALL DISPOSITION" window.
+    *   The bottom section of the "CALL DISPOSITION" window with post-action buttons (EXPORT PDF, SEND EMAIL, CANCEL, RESET) becomes active.
+3.  The agent can then choose one of the following post-call actions:
+    *   **EXPORT PDF:** Generates, previews, allows editing, and exports a PDF document based on a selected template and lead data.
+    *   **SEND EMAIL:** Generates, previews, allows editing, and sends an email based on a selected template and lead data.
+    *   **CANCEL:** Closes the "CALL DISPOSITION" pop-up without any further action.
+    *   **RESET:** Resets the application state, clears data, and returns to the "Start Screen".
+4.  If the agent clicks "NO" in the confirmation pop-up, the "END CALL" or "RESET" action is cancelled, and the application returns to the "TRANSCRIPT" panel.
+
+**5.9. PDF Generation and Export**
+
+1.  Triggered by clicking "EXPORT PDF" in the "CALL DISPOSITION" window.
+2.  The agent selects a PDF template from the available options.
+3.  The application generates a PDF document, populating it with data from the "CALLER DATA & INFO" panel based on template mappings.
+4.  A PDF preview is displayed, allowing editing.
+5.  The agent can click "EXPORT" to save the PDF to the "EXPORTS" folder or "BACK" to return to the "CALL DISPOSITION" window.
+
+**5.10. Email Sending**
+
+1.  Triggered by clicking "SEND EMAIL" in the "CALL DISPOSITION" window.
+2.  The agent selects an email template from the available options (same templates as PDF).
+3.  The application generates an email body, populating it with data from the "CALLER DATA & INFO" panel based on template mappings.
+4.  An email preview is displayed, allowing editing of recipient, subject, and body.
+5.  The agent can click "SEND" to send the email via GMAIL SMTP to "softwaredevmanager@assurecall.com" or "BACK" to return to the "CALL DISPOSITION" window.
+
+**5.11. Reset Functionality**
+
+1.  Triggered by clicking the "RESET" button in the "TRANSCRIPT" panel or the "RESET" button in the "CALL DISPOSITION" window.
+2.  A "Confirm Reset" pop-up is displayed.
+3.  If the agent clicks "YES":
+    *   All fields in the "CALLER DATA & INFO" panel are cleared.
+    *   The TRANSCRIPT panel returns to the "Start Screen".
+    *   Both progress bars are reset to 0%.
+    *   The "CALL DISPOSITION" pop-up window (if active) is closed.
+4.  If the agent clicks "NO", the reset action is cancelled.
+
+**5.12. End Call Functionality**
+
+1.  Triggered by clicking the "END CALL" button in the "TRANSCRIPT" panel.
+2.  An "Are you sure you want to END CALL?" confirmation pop-up is displayed.
+3.  If the agent clicks "YES":
+    *   The "CALL DISPOSITION" pop-up window is displayed, allowing the agent to select a disposition and perform post-call actions.
+4.  If the agent clicks "NO", the end call action is cancelled.
+
+---
+
+**6. Capabilities and Functionalities**
+
+The Storm911 application is designed to provide a comprehensive set of capabilities for roofing appointment scheduling agents.
+
+**6.1. ReadyMode API Integration**
+
+The application seamlessly integrates with the ReadyMode API to enhance agent workflow and data management.
+
+**6.1.1. Login Authentication**
+
+*   **ReadyMode Login Screen:** Secure login screen for agents to authenticate with their ReadyMode credentials.
+*   **API-Based Authentication:** Uses ReadyMode API (Search Lead endpoint) to verify login credentials.
+*   **Credential Saving:** Securely saves valid `API_user` and `API_pass` for subsequent API calls.
+
+**6.1.2. Lead Search and Data Retrieval**
+
+*   **Phone Number Search:** Allows agents to search for leads in ReadyMode by phone number directly from the application GUI.
+*   **ReadyMode API "SEARCH" Endpoint:** Utilizes the ReadyMode API "SEARCH" lead endpoint to perform lead searches.
+*   **Automatic Data Population:** Option to automatically populate the "CALLER DATA & INFO" panel with lead data retrieved from ReadyMode, streamlining data entry and reducing manual work.
+*   **Data Mapping:**  Correctly maps data fields from the ReadyMode API response to the corresponding fields in the "CALLER DATA & INFO" panel.
+
+**6.2. Dynamic Script Display and Navigation**
+
+*   **Multi-Page Script:** Presents the call script in a structured, page-by-page format for easy agent guidance.
+*   **Clear Script Content:** Script text is formatted for readability, with key instructions and pauses highlighted.
+*   **Navigation Buttons:** "Previous" and "Next" buttons for easy script navigation.
+*   **Start Screen:** Provides a clear starting point for each call interaction.
+*   **TRANSCRIPT Progress Bar:** Visually tracks agent progress through the call script.
+
+**6.3. Objection Handling and Responses**
+
+*   **Objection Buttons Panel:** Dedicated panel with categorized objection buttons for quick access to responses.
+*   **Pre-written Objection Responses:** Provides pre-written, effective responses to common objections, ensuring consistent and professional handling of objections.
+*   **Objection Pop-up Windows:** Displays objection responses in clear, modal pop-up windows, allowing agents to read and utilize responses without losing context.
+*   **Categorized Objections:** Objections are grouped into logical categories (Group 1, Group 2) for easier navigation and selection.
+
+**6.4. Data Entry and Management**
+
+*   **CALLER DATA & INFO Panel:** Dedicated panel for structured data entry of caller and appointment information.
+*   **Organized Data Fields:** Data fields are logically grouped into "Customer Information", "Roofing Information", and "Insurance and Appointment Information" sub-sections.
+*   **Input Field Types:** Utilizes appropriate input field types (text inputs, dropdown selections, date input) for efficient and accurate data entry.
+*   **Automatic Data Population (from ReadyMode):** Reduces manual data entry by automatically populating fields from ReadyMode lead data.
+*   **CALLER DATA & INFO Progress Bar:** Visually tracks data entry completion in the "CALLER DATA & INFO" panel.
+
+**6.5. Progress Tracking**
+
+*   **CALLER DATA & INFO Progress Bar:** Tracks data entry progress in the "CALLER DATA & INFO" panel.
+*   **TRANSCRIPT Progress Bar:** Tracks agent progress through the call script.
+*   **Percentage Completion Display:** Both progress bars display percentage completion values for clear progress indication.
+
+**6.6. Call Disposition and Reporting**
+
+*   **CALL DISPOSITION Pop-up Window:** Provides a structured interface for agents to categorize call outcomes.
+*   **Comprehensive Disposition Options:** Offers a wide range of disposition options to accurately classify call results (e.g., "Appointment Set", "Not Interested", "No Insurance").
+*   **Post-Call Actions:** Integrates post-call actions directly into the disposition process, streamlining workflow after call completion.
+
+**6.7. PDF Export**
+
+*   **PDF Generation:** Generates PDF documents based on pre-defined templates and lead data.
+*   **Template Selection:** Allows agents to choose from multiple PDF templates for different reporting needs.
+*   **Data Population in PDF:** Automatically populates PDF templates with data from the "CALLER DATA & INFO" panel.
+*   **PDF Preview and Editing:** Provides a preview of the generated PDF and allows agents to edit data before export.
+*   **Local PDF Export:** Exports generated PDF documents to a designated "EXPORTS" folder for easy access and record-keeping.
+*   **Multiple PDF Templates:** Includes 4 distinct PDF templates ("Appointment Set-Review.txt", "Approved Appointment.txt", "Confirmation Call Needed.txt", "Denied Appointment.txt") to cater to various call outcomes.
+
+**6.8. Email Communication**
+
+*   **Email Generation:** Generates email bodies based on pre-defined templates and lead data.
+*   **Template Selection (Email):** Uses the same 4 templates as PDF export for email generation, ensuring consistency.
+*   **Data Population in Email:** Automatically populates email templates with data from the "CALLER DATA & INFO" panel.
+*   **Email Preview and Editing:** Provides an email preview and allows agents to edit recipient, subject, and body before sending.
+*   **GMAIL SMTP Integration:** Sends emails via GMAIL SMTP using specified settings (server, port, authentication, username, password).
+*   **Pre-defined Recipient:** Pre-fills the recipient email address as "softwaredevmanager@assurecall.com" for streamlined reporting.
+
+**6.9. User Interface and Aesthetics**
+
+*   **Professional GUI Design:** Aims for a commercially appealing and professional GUI design, enhancing user experience.
+*   **Three-Panel Layout:** Organizes information and functionalities into three logical panels ("CALLER DATA & INFO", "TRANSCRIPT", "OBJECTIONS") for efficient workflow.
+*   **Consistent Visual Style:** Maintains a consistent visual style throughout the application, including colors, fonts, and element styling.
+*   **Enhanced Panel Titles:** Improves the aesthetics of panel titles with professional styling and borders.
+*   **Splash Screen:** Includes a visually appealing splash screen with company logos for branding and initial impression.
+*   **Progress Bars:** Incorporates visually informative progress bars to track data entry and script progress.
+*   **Clear Button Styling:** Uses distinct button styles (colors, labels) to clearly indicate button functions and actions.
+*   **Pop-up Window Design:** Designs pop-up windows with a consistent and user-friendly aesthetic.
+
+---
+
+**7. GUI Aesthetics and Visual Details**
+
+To create a commercially appealing and professional GUI, the following aesthetic and visual details should be implemented in the Python program.
+
+**7.1. Color Scheme**
+
+The base color scheme from the HTML (blue, green, red, grey, light grey, yellow) should be maintained but enhanced to be more vibrant and modern.
+
+*   **Primary Blue:** Use a more vibrant and professional shade of blue for primary interactive elements like action buttons, titles, and headers.  Consider shades like #007bff or #2962ff.
+*   **Success Green:** Use a brighter and more appealing green for success indicators and positive action buttons (e.g., confirmation buttons, "START" button). Shades like #4caf50 or #66bb6a.
+*   **Error Red:** Maintain a clear and noticeable red for error indicators, negative action buttons (e.g., "END CALL", "CANCEL"), and critical alerts. Shades like #f44336 or #e53935.
+*   **Neutral Grey:** Use varying shades of grey for neutral buttons (e.g., "Previous", "Next", "RESET"), panel backgrounds, borders, and text. Consider using lighter greys for backgrounds (#f5f5f5, #f9f9f9, #ffffff) and darker greys for text and borders (#ddd, #ccc, #bbb, #808080, #6e6e6e).
+*   **Warning Yellow:** Use a more vibrant yellow or amber for warning indicators or buttons requiring caution (e.g., "SEND EMAIL"). Shades like #ffA000 or #ffca28.
+*   **Background Colors:** Use light grey shades (#f5f5f5, #f9f9f9, #ffffff) for panel backgrounds to create a clean and professional look. The main GUI background can be a very light grey (#f9f9f9 or #ffffff).
+*   **Text Colors:** Use dark grey or black (#333, #000) for primary text to ensure readability against the light backgrounds. Use white text for buttons with colored backgrounds (blue, green, red, yellow, grey).
+
+**7.2. Panel Titles and Borders**
+
+The panel titles in the HTML are rudimentary. They need significant aesthetic improvement to look professional.
+
+*   **Larger Font Size:** Increase the font size of all panel titles ("CALLER DATA & INFO", "TRANSCRIPT", "OBJECTIONS") to be noticeably larger than the body text, making them stand out. Consider using font sizes like 18pt or 20pt.
+*   **Bold Font Weight:** Use a bold font weight for all panel titles to further emphasize them.
+*   **Title Bar Background:** Instead of just underscores, enclose each panel title within a visually distinct title bar. This can be achieved by adding a background color to the title area, slightly darker than the panel background, or a contrasting color that complements the overall scheme. For example, a light blue or light grey title bar background.
+*   **Borders:** Add subtle borders to each panel to visually separate them and define their boundaries. Use thin, solid borders in a medium grey color (#ddd or #ccc). Rounded corners (border-radius: 10px) for the panels will enhance the modern look.
+*   **Padding and Margins:** Ensure adequate padding around the panel titles and within the panels to create visual spacing and prevent elements from feeling cramped.
+
+**7.3. Fonts and Text Styling**
+
+The default HTML font is basic. Using a more professional and readable font will greatly improve the GUI's aesthetics.
+
+*   **Professional Font Family:** Use a clean and professional sans-serif font family for all text in the application. Options include "Arial", "Helvetica", "Verdana", "Roboto", or "Open Sans". Ensure the font is consistently applied throughout the GUI.
+*   **Consistent Font Sizes:** Establish a consistent hierarchy of font sizes. Panel titles should be largest, followed by section sub-titles, then main body text, and finally smaller font sizes for labels and progress bar text.
+*   **Line Height and Spacing:** Adjust line height and letter spacing for body text to improve readability and visual appeal. A line height of 1.5 to 1.6 and slightly increased letter spacing can enhance readability.
+*   **Text Alignment:** Primarily use left-alignment for text content within panels for ease of reading. Center-align titles and button text.
+*   **Emphasis Styles:** Maintain the use of bold and red/blue colors for emphasis in the script text as defined in the HTML, but ensure these styles are visually consistent with the chosen font and color scheme.
+
+**7.4. Images and Logos**
+
+The application uses two transparent PNG images: "storm911.png" (title logo) and "assurecall.png" (company logo).
+
+*   **Image Clarity:** Ensure both images are high-resolution and crisp, especially when scaled on different screen sizes.
+*   **Transparency:** Maintain the transparency of the PNG images to allow them to blend seamlessly with the background.
+*   **Placement:** Position "assurecall.png" at the top left and "storm911.png" centered at the top header section of the GUI, as specified.
+*   **Splash Screen Integration:** Use these images prominently in the splash screen as described in section 2.
+*   **Loading Screen Integration:** Consider using a smaller, less prominent version of the "storm911.png" logo in a loading screen (if implemented) to maintain brand visibility during loading times.
+
+**7.5. Splash Screen and Loading Screen**
+
+The splash screen is already defined, but a loading screen could be considered for longer operations (though not explicitly requested, it's a good commercial practice).
+
+*   **Splash Screen Duration:** Maintain the 1.5-second duration for the splash screen.
+*   **Splash Screen Background:** Use a solid, dark background color (dark blue or grey) for the splash screen to make the transparent logos stand out effectively.
+*   **Loading Screen (Optional):** If lead searching or other operations take more than a second or two, consider implementing a simple loading screen displayed after the login and before the main GUI fully loads. This loading screen could display a progress indicator (e.g., spinning circle, progress bar) and a smaller version of the "storm911.png" logo, along with a "Loading..." message.
+
+**7.6. Progress Bars Visuals**
+
+The progress bars in the HTML are basic. They can be made more visually appealing and informative.
+
+*   **Stylized Progress Bar Design:** Instead of a plain grey bar with a simple green fill, use a more stylized progress bar design. Consider:
+    *   Slightly rounded corners for the progress bar container and fill.
+    *   Subtle gradient fill for the progress bar (as in the HTML, but potentially refined).
+    *   A thin border around the progress bar container for better definition.
+    *   A more visually appealing color for the progress bar fill. The current green-yellow gradient is acceptable, but consider other professional color gradients or solid colors that fit the overall scheme.
+*   **Percentage Text Styling:** Style the percentage text within the progress bar to be clearly readable against the progress bar fill color. Use a bold font weight and a contrasting color (white text on a darker progress bar fill, or dark text on a lighter fill). Ensure the text is centered within the progress bar.
+*   **Animation (Optional):** Consider adding a subtle animation to the progress bar fill as it updates, making it visually smoother and more engaging.
+
+**7.7. Button Aesthetics**
+
+The HTML buttons are functional but visually basic. Button aesthetics are crucial for a professional GUI.
+
+*   **Consistent Button Style:** Apply a consistent style to all buttons throughout the application, maintaining uniformity in shape, size, font, and visual effects.
+*   **Rounded Corners:** Use rounded corners for all buttons (border-radius: 5px or 8px) to create a softer, more modern look.
+*   **Padding and Size:** Ensure buttons have adequate padding to make them easily clickable and visually balanced. Button sizes should be appropriate for their context – action buttons can be larger, while smaller buttons can be used in pop-ups or navigation.
+*   **Color Coding:** Maintain the color-coding scheme from the HTML (green for positive actions, red for negative/critical actions, grey for neutral/navigation, blue for general actions, yellow for warning/email). Use the enhanced color palette described in section 7.1.
+*   **Hover Effects:** Implement clear hover effects for all buttons to provide visual feedback when the user interacts with them. Common hover effects include:
+    *   Slightly darkening the button color on hover.
+    *   Adding a subtle shadow on hover.
+    *   Changing the cursor to a pointer on hover.
+*   **Font Styling:** Use a bold font weight for button text to make it stand out. Ensure the font color contrasts well with the button background color.
+
+**7.8. Pop-up Window Aesthetics**
+
+Pop-up windows should be visually consistent with the main GUI and designed to be clear and non-intrusive.
+
+*   **Consistent Styling:** Ensure pop-up windows share the same font family, color scheme, and border styles as the main GUI panels.
+*   **Modal Overlay:** Maintain the semi-transparent modal overlay behind pop-up windows to focus user attention on the pop-up content and disable interaction with the main GUI while the pop-up is active.
+*   **Rounded Corners:** Use rounded corners for pop-up window containers (border-radius: 8px or 10px).
+*   **Shadows:** Add subtle box shadows to pop-up windows to give them a slight depth effect and visually separate them from the background.
+*   **Title Bar (Optional):** For pop-ups with titles (like confirmation pop-ups or "CALL DISPOSITION"), consider adding a simple title bar at the top with a slightly darker background color and the title text.
+*   **Close Button Styling:** Style the "Close" button in pop-up windows consistently with other buttons, but ensure it is visually distinct and easily identifiable. The "X" close button in the HTML is acceptable, but consider using a more standard "Close" or "OK" button label in addition to or instead of "X".
+*   **Animation (Optional):** Implement a subtle fade-in and fade-out animation for pop-up windows to make their appearance and disappearance smoother and less abrupt (as partially implemented in the HTML with `animation: fadeIn`).
+
+By implementing these GUI aesthetic details, the Python-based Storm911 application will achieve a professional, visually appealing, and user-friendly interface, enhancing agent productivity and user satisfaction.
+
+---
+
+**8. Detailed Page and Button Descriptions (TRANSCRIPT Panel)**
+
+This section provides a detailed description of each page in the "TRANSCRIPT" panel, including the script text and associated buttons. The page numbering has been corrected from the HTML to ensure a logical sequence.
+
+**8.1. START Page**
+
+*   **Title:** "Welcome to the Storm911 21 Second Pitch" (centered, larger font, bold).
+*   **Content:**
+    *   Paragraph: "Click Below To Begin The Process." (centered, standard font size).
+*   **Buttons:**
+    *   **Start:** (Green button, label "Start", ID: `start-btn`, function: `startScript()`). Function: Hides the Start Screen and loads Page 1 of the script into the TRANSCRIPT panel.
+
+**8.2. Page 1 (THE HOOK - 8.25 SECONDS)**
+
+*   **Title:** "THE HOOK - 8.25 SECONDS" (centered, blue color, bold).
+*   **Content:**
+    ```
+    Hello, is Mr. (____________________) available?
+    How are you doing today?
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR A RESPONSE!!!</span>
+    I want to be honest with you,
+    this is a cold call,
+    BUT
+    if you give me 30 seconds of your time,
+    I will not waste it!
+    ```
+*   **Buttons:**
+    *   **I am not Interested- 30 second objection:** (Red button, label "I am not Interested- 30 second objection", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **I dont have time:** (Red button, label "I dont have time", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 2 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.3. Page 2 (INTRODUCTION AND APPOINTMENT SETTING)**
+
+*   **Title:** "INTRODUCTION AND APPOINTMENT SETTING" (centered, blue color, bold).
+*   **Content:**
+    ```
+    My name is _______________
+    with (__________________) on a recorded line.
+    Tomorrow we will be in the area
+    giving free roof inspections
+    to some of your neighbors
+    for damages caused by the storms
+    that have hit our area,
+    and I would like to schedule an appointment with you!
+
+    Would mornings or afternoons work best for you?
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR A RESPONSE!!!</span>
+    Thank you, let me explain the inspection process to you.
+    ```
+*   **Buttons:**
+    *   **I am not Interested- 30 second objection:** (Red button, label "I am not Interested- 30 second objection", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **I dont have time:** (Red button, label "I dont have time", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **whichNeighbor:** (Red button, label "whichNeighbor", function: `showPopup('whichNeighbor')`). Function: Triggers the "Which Neighbors are you Inspecting" pop-up window.
+    *   **notOwner:** (Red button, label "notOwner", function: `showPopup('notOwner')`). Function: Triggers the "Did Not Give Property Owners Name" pop-up window.
+    *   **spam:** (Red button, label "spam", function: `showPopup('spamObjection')`). Function: Triggers the "spamObjection" pop-up window.
+    *   **howDidYouGetMyNumber:** (Red button, label "howDidYouGetMyNumber", function: `showPopup('myNumber')`). Function: Triggers the "myNumber" pop-up window.
+    *   **callBack:** (Red button, label "callBack", function: `showPopup('callBack')`). Function: Triggers the "Call Back Later" pop-up window.
+    *   **nothingIsForFree:** (Red button, label "nothingIsForFree", function: `showPopup('nothingIsForFree')`). Function: Triggers the "Nothing Is For Free" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 3 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 1 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.4. Page 3 (THE INSPECTION PROCESS)**
+
+*   **Title:** "THE INSPECTION PROCESS" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="font-weight:bold;">This is How it works:</span>
+    Our inspectors will conduct
+    a 7-point damage inspection for your property.
+    They’ll start on the ground level, inspecting:
+    <ul>
+        <li>Windows</li>
+        <li>Screens</li>
+        <li>Gutters</li>
+        <li>Downspouts</li>
+        <li>Garage doors</li>
+        <li>AC units</li>
+        <li>Mailbox</li>
+    </ul>
+    The reason they start there is
+    they are looking for signs that
+    hail has hit the property.
+    ```
+*   **Buttons:**
+    *   **sellingMyHome:** (Red button, label "sellingMyHome", function: `showPopup('sellingMyHome')`). Function: Triggers the "Selling My Home Objection" pop-up window.
+    *   **noDamage:** (Red button, label "noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+    *   **Already has a contractor:** (Red button, label "Already has a contractor", function: `showPopup('hasAContractor')`). Function: Triggers the "hasAContractor" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 4 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 2 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.5. Page 4 (THE INSPECTION PROCESS)**
+
+*   **Title:** "THE INSPECTION PROCESS" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="font-weight:bold;">After they complete the ground inspection
+    they will get up on the roof
+    to do the roof inspection:</span>
+    ```
+*   **Buttons:**
+    *   **alreadyInspected:** (Red button, label "alreadyInspected", function: `showPopup('alreadyInspected')`). Function: Triggers the "alreadyInspected" pop-up window.
+    *   **noDamage:** (Red button, label "noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 5 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 3 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.6. Page 5**
+
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span>Now Is your home a 1 or 2-story home
+    so we bring out the right size ladder?
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR A RESPONSE!!!</span>
+
+    Thank you
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 6 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 4 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.7. Page 6 (INSPECTION PROCESS CONTINUED)**
+
+*   **Title:** "INSPECTION PROCESS CONTINUED" (centered, blue color, bold).
+*   **Content:**
+    ```
+    Next, They’ll conduct a roof inspection
+    by creating a 10-foot by 10-foot
+    test area on your roof.
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 7 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 5 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.8. Page 7**
+
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span> May I ask what type
+    of roofing do you have on the home?
+    Is it:
+    <ul>
+        <li>Shingle Roofing</li>
+        <li>Metal Roofing</li>
+        <li>Tile Roofing</li>
+        <li>Cedar Shake Roofing</li>
+    </ul>
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR A RESPONSE!!!</span>
+
+    Thank You
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 8 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 6 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.9. Page 8 (INSPECTION PROCESS CONTINUED)**
+
+*   **Title:** "INSPECTION PROCESS CONTINUED" (centered, blue color, bold).
+*   **Content:**
+    ```
+    Now What They’re Looking For in the Test square
+    is they are trying to find
+    6 to 8 hail impacts
+    to qualify for a full roof replacement.
+    If they find fewer than that,
+    it typically means a roof repair is needed.
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 9 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 7 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.10. Page 9**
+
+*   **Title:** "CONTINUED INSPECTION QUESTIONS" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span> And how old is your
+    roof on your home? Is it:
+    ```
+*   **Buttons:**
+    *   **1 to 4 years Shingle and Cedar:** (Red button, label "1 to 4 years Shingle and Cedar", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **5+ Year Shingle and Cedar:** (Green button, label "5+ Year Shingle and Cedar", function: `showPopup('noTimeQualified')`). Function: Triggers the "noTimeQualified" pop-up window.
+    *   **1 year+ Metal & Tile:** (Green button, label "1 year+ Metal & Tile", function: `showPopup('noTimeQualified')`). Function: Triggers the "noTimeQualified" pop-up window.
+    *   **1 MONTH TO 11 MONTHS Metal & Tile:** (Red button, label "1 MONTH TO 11 MONTHS Metal & Tile", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **I am Not Interested:** (Red button, label "I am Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 8 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.11. Page 10 (QUESTION: Alot of your neighbors I have spoken to...)**
+
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span> Alot of your neighbors I have spoken to
+    Have State Farm and AllState,
+    Is your Insurance company StateFarm or AllState As Well?
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR A RESPONSE!!!</span>
+    ```
+*   **Buttons:**
+    *   **noInsurance:** (Red button, label "noInsurance", function: `showPopup('noInsurance')`). Function: Triggers the "Does Not Have insurance Objection" pop-up window.
+    *   **nameInsurancNo:** (Green button, label "nameInsurancNo", function: `showPopup('nameInsurancNo')`). Function: Triggers the "nameInsurancNo" pop-up window.
+    *   **nameInsuranceYes:** (Green button, label "nameInsuranceYes", function: `showPopup('nameInsuranceYes')`). Function: Triggers the "nameInsuranceYes" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 9 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.12. Page 11 (INSPECTION PROCESS CONTINUED)**
+
+*   **Title:** "INSPECTION PROCESS CONTINUED" (centered, blue color, bold).
+*   **Content:**
+    ```
+    Now If damages are found during the inspection:
+
+    <li>They will document the damages.</li>
+    <li>Take photos.</li>
+
+    Then, they will sit down with you
+    and discuss the inspection findings
+    and explain how they can help you
+    with the insurance claim process,
+    ensuring everything is properly paid for
+    by the insurance company and restored.back to new
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR A RESPONSE!!!</span>
+    ```
+*   **Buttons:**
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **sellingMyHome:** (Red button, label "sellingMyHome", function: `showPopup('sellingMyHome')`). Function: Triggers the "Selling My Home Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **alreadyInspected:** (Red button, label "alreadyInspected", function: `showPopup('alreadyInspected')`). Function: Triggers the "alreadyInspected" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 10 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.13. Page 12 (IF THEY FIND NO DAMAGES)**
+
+*   **Title:** "IF THEY FIND NO DAMAGES" (centered, blue color, bold).
+*   **Content:**
+    ```
+    If they don’t find any damages,
+    they will share the inspection results
+    with the National Insurance Restoration Council,
+    a nonprofit dedicated to helping
+    property owners in storm-affected areas.
+    ```
+*   **Buttons:**
+    *   **whoIsNIRC:** (Red button, label "whoIsNIRC", function: `showPopup('whoIsNIRC')`). Function: Triggers the "Who Is The NIRC Objection" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 13 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 11 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.14. Page 13**
+
+*   **Content:**
+    ```
+    The NIRC will create a certified
+    No-Damage Inspection Report
+    and send it to you BY EMAIL for your records.
+
+    This is a free service to help protect you
+    from insurance companies denying
+    your future claims.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **whoIsNIRC:** (Red button, label "whoIsNIRC", function: `showPopup('whoIsNIRC')`). Function: Triggers the "Who Is The NIRC Objection" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 14 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 12 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.15. Page 14 (CONFIRM EMAIL)**
+
+*   **Title:** "CONFIRM EMAIL" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="font-weight:bold;">RESPONSE:</span> JUST TO CONFIRM,
+    the email that I have on file
+    to send the report to
+    is (Profile.LastName)721@GMAIL.COM
+
+    <span style="color:red; font-weight:bold;">WAIT FOR A RESPONSE SAYING IT IS THE WRONG EMAIL!!</span>
+
+    <span style="font-weight:bold;">RESPONSE:</span>
+    Oh goodness, we would have sent the email
+    to the wrong person.
+
+    May I get your correct email?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **emailYes:** (Green button, label "emailYes", function: `showPopup('emailYes')`). Function: Triggers the "They Gave New Email Address" pop-up window.
+    *   **emailNo:** (Red button, label "emailNo", function: `showPopup('emailNo')`). Function: Triggers the "Did Not Give A New Email Address" pop-up window.
+    *   **Why do you need my email?:** (Red button, label "Why do you need my email?", function: `showPopup('myEmail')`). Function: Triggers the "Why Do You Need My Email Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 13 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.16. Page 15 (ROOF LEAK AND HOMEOWNER CONFIRMATION)**
+
+*   **Title:** "ROOF LEAK AND HOMEOWNER CONFIRMATION" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span>
+
+    Now Have you seen any ROOF leaks,
+    or water spots; it would look like
+    coffee stains on the ceiling?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **yesRoofLeak:** (Green button, label "yesRoofLeak", function: `showPopup('yesRoofLeak')`). Function: Triggers the "yesRoofLeak" pop-up window.
+    *   **noRoofLeak:** (Green button, label "noRoofLeak", function: `showPopup('noRoofLeak')`). Function: Triggers the "noRoofLeak" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 14 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.17. Page 16 (CLOSING THE APPOINTMENT)**
+
+*   **Title:** "CLOSING THE APPOINTMENT" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span>
+    I would like to make sure
+    I have your name correct,
+    it's (.First Name) (Last Name)?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 17 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 15 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.18. Page 17 (CLOSING THE APPOINTMENT)**
+
+*   **Title:** "CLOSING THE APPOINTMENT" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span>
+    Just to verify that I have the
+    correct address in my records,
+    I have (FULL ADDRESS)?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+
+    <span style="color:black; font-weight:bold;">*(If the address is not the same,
+    verify it and updated in the system) *</span>
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 18 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 16 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.19. Page 18 (CLOSING THE APPOINTMENT)**
+
+*   **Title:** "CLOSING THE APPOINTMENT" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span>
+    And you haven’t signed a contract
+    And you the only homeowner
+    or decision maker?, correct?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **notownerlandlord:** (Red button, label "Not Owner/Landlord", function: `showPopup('notOwnerLandlordObjection')`). Function: Triggers a new pop-up window "Not Owner/Landlord Objection" to handle scenarios where the prospect is not the homeowner.
+    *   **Yes Owner - Decision Maker:** (Green button, label "Yes Owner - Decision Maker", function: `nextPage()`). Function: Confirms the prospect is the owner and decision-maker and navigates to Page 19.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 17 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.20. Page 19 (CLOSING THE APPOINTMENT)**
+
+*   **Title:** "CLOSING THE APPOINTMENT" (centered, blue color, bold).
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">QUESTION:</span>
+    And you haven’t signed a contract
+    with any other roofing company,
+    correct?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **nocontractor:** (Green button, label "nocontractor", function: `showPopup('noContractor')`). Function: Triggers the "noContractor" pop-up window.
+    *   **yescontractor:** (Red button, label "yescontractor", function: `showPopup('hasAContractor')`). Function: Triggers the "hasAContractor" pop-up window.
+    *   **badExperience:** (Red button, label "badExperience", function: `showPopup('badExperience')`). Function: Triggers the "I Had a Bad Experience with Contractors In The Past" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 18 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.21. Page 20 (CLOSING THE APPOINTMENT)**
+
+*   **Title:** "CLOSING THE APPOINTMENT" (centered, blue color, bold).
+*   **Content:**
+    ```
+    Just so you know we can work around your schedule,
+
+    <span style="color:red; font-weight:bold;">QUESTION:</span>
+    <span style="color:black; font-weight:bold;"><p>WHAT TIME TOMORROW WORKS BEST FOR YOU</p>
+    <p>MORNING OR AFTERNOON?</p>:</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+
+    <span style="color:black; font-weight:bold;"><p>(Give times available per</p>
+    <p>calendar link on calendar tab</p>
+    <p>We can schedule up the three days out</p>
+    <p>get the day and time confirmed</p>
+    ```
+*   **Buttons:**
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **cantCallBack:** (Red button, label "cantCallBack", function: `showPopup('cantCallYou')`). Function: Triggers the "Why Can't I Call You Objection" pop-up window.
+    *   **nodecision:** (Red button, label "nodecision", function: `showPopup('noDecision')`). Function: Triggers the "noDecision" pop-up window.
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 21 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 19 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.22. Page 21 (FINAL CLOSING AND REFERRALS)**
+
+*   **Title:** "FINAL CLOSING AND REFERRALS" (centered, blue color, bold).
+*   **Content:**
+    ```
+    Well (Profile.First Name),
+    I want to thank you for your time,
+    and it was a pleasure speaking with you.
+    We will see you on
+    (Appointment date and time) SHARP,
+    and I CAN COUNT ON YOU BEING THERE THEN?
+    ```
+*   **Buttons:**
+    *   **Next:** (Grey button, label "Next", ID: `next-btn`, function: `nextPage()`). Function: Navigates to Page 22 of the script.
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 20 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+**8.23. Page 22 (ASK FOR THE SALE DO NOT WIMP OUT)**
+
+*   **Content:**
+    ```
+    <span style="color:red; font-weight:bold;">ASK FOR THE SALE DO NOT WIMP OUT</span>
+
+    "Thank you for setting up
+    the inspection with us tomorrow.
+
+    I have just one last favor to ask,
+    and I hope I have earned
+    the opportunity.
+    After we’ve finished
+    looking at your roof,
+    I wanted to ask
+    if there are any neighbors
+    or friends in the area
+    that you would not mind
+    referring me to so we can
+    provide this service to them as well?
+
+    If you feel comfortable referring us,
+    I would greatly appreciate it.
+    Your support means a lot to me,
+    and it would really help me
+    and my family out a lot."
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Yes, Now:** (Green button, label "Yes, Now", function: `handleReferralResponse('yes_now')`). Function: Triggers the referral response for "Yes, Now".
+    *   **Yes, Later:** (Yellow button, label "Yes, Later", function: `handleReferralResponse('yes_later')`). Function: Triggers the referral response for "Yes, Later".
+    *   **No:** (Red button, label "No", function: `handleReferralResponse('no')`). Function: Triggers the referral response for "No".
+    *   **Previous:** (Grey button, label "Previous", ID: `prev-btn`, function: `previousPage()`). Function: Navigates to Page 21 of the script.
+    *   **End Call:** (Red button, label "END CALL"). Function: Triggers the "END CALL" process.
+
+---
+
+**9. Detailed Objection Button Descriptions (OBJECTIONS Panel)**
+
+This section details each objection button in the "OBJECTIONS" panel, categorized by "Group 1" and "Group 2" as in the HTML.
+
+**9.1. Group 1 Objection Buttons**
+
+*   **Thirty Second:** (Red button, label "Thirty Second", data-objection="thirtySecondObjection", function: `showPopup('thirtySecondObjection')`). Function: Triggers the "thirtySecondObjection" pop-up window.
+*   **I don't have time:** (Red button, label "I don't have time", data-objection="noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+*   **How did I fail you?:** (Red button, label "How did I fail you?", data-objection="failed", function: `showPopup('failed')`). Function: Triggers the "failed" pop-up window.
+*   **I'm not interested:** (Red button, label "I'm not interested", data-objection="notInterested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+*   **I already had an inspection:** (Red button, label "I already had an inspection", data-objection="alreadyInspected", function: `showPopup('alreadyInspected')`). Function: Triggers the "alreadyInspected" pop-up window.
+*   **I don't have any damages:** (Red button, label "I don't have any damages", data-objection="noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+*   **My Insurance Claim Was Denied:** (Red button, label "My Insurance Claim Was Denied", data-objection="myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+*   **I Am Selling My Home:** (Red button, label "I Am Selling My Home", data-objection="sellingMyHome", function: `showPopup('sellingMyHome')`). Function: Triggers the "Selling My Home Objection" pop-up window.
+*   **We have a metal roof:** (Red button, label "We have a metal roof", data-objection="metalRoof", function: `showPopup('metalRoof')`). Function: Triggers the "No Damage Metal Roof Objection" pop-up window.
+*   **Call Back Later:** (Red button, label "Call Back Later", data-objection="callBack", function: `showPopup('callBack')`). Function: Triggers the "Call Back Later" pop-up window.
+*   **Don't Want To Decide Now:** (Red button, label "Don't Want To Decide Now", data-objection="nodecision", function: `showPopup('noDecision')`). Function: Triggers the "noDecision" pop-up window.
+*   **No Insurance:** (Red button, label "No Insurance", data-objection="noinsurance", function: `showPopup('noInsurance')`). Function: Triggers the "Does Not Have insurance Objection" pop-up window.
+    *   **Not The Homeowner:** (Red button, label "Not The Homeowner", data-objection="notOwner", function: `showPopup('notOwner')`). Function: Triggers the "Did Not Give Property Owners Name" pop-up window.
+
+**9.2. Group 2 Objection Buttons**
+
+*   **Is this a spam call?:** (Red button, label "Is this a spam call?", data-objection="spamObjection", function: `showPopup('spamObjection')`). Function: Triggers the "spamObjection" pop-up window.
+*   **How did you get my number?:** (Red button, label "How did you get my number?", data-objection="howDidYouGetMyNumber", function: `showPopup('myNumber')`). Function: Triggers the "myNumber" pop-up window.
+*   **Who is the NIRC?:** (Red button, label "Who is the NIRC?", data-objection="whoIsNIRC", function: `showPopup('whoIsNIRC')`). Function: Triggers the "Who Is The NIRC Objection" pop-up window.
+*   **Why can't I call you back?:** (Red button, label "Why can't I call you back?", data-objection="cantCallBack", function: `showPopup('cantCallYou')`). Function: Triggers the "Why Can't I Call You Objection" pop-up window.
+*   **I had a bad experience-contractor:** (Red button, label "I had a bad experience-contractor", data-objection="hadBadExperience", function: `showPopup('badExperience')`). Function: Triggers the "I Had a Bad Experience with Contractors In The Past" pop-up window.
+*   **I don’t have homeowners Insurance:** (Red button, label "I don’t have homeowners Insurance", data-objection="noInsurance", function: `showPopup('noInsurance')`). Function: Triggers the "Does Not Have insurance Objection" pop-up window.
+*   **Nothing Is For Free:** (Red button, label "Nothing Is For Free", data-objection="nothingIsForFree", function: `showPopup('nothingIsForFree')`). Function: Triggers the "Nothing Is For Free" pop-up window.
+*   **Which Neighbor are you Inspecting:** (Red button, label "Which Neighbor are you Inspecting", data-objection="whichNeighbor", function: `showPopup('whichNeighbor')`). Function: Triggers the "Which Neighbors are you Inspecting" pop-up window.
+*   **Already Has A Contractor:** (Red button, label "Already Has A Contractor", data-objection="hasAContractor", function: `showPopup('hasAContractor')`). Function: Triggers the "hasAContractor" pop-up window.
+*   **Bad Experience:** (Red button, label "Bad Experience", data-objection="badExperience", function: `showPopup('badExperience')`). Function: Triggers the "I Had a Bad Experience with Contractors In The Past" pop-up window.
+*   **Thirty Second:** (Red button, label "Thirty Second", data-objection="thirtySecondObjection", function: `showPopup('thirtySecondObjection')`). Function: Triggers the "thirtySecondObjection" pop-up window.
+
+---
+
+**10. Detailed Objection Pop-up Window Descriptions**
+
+This section provides the detailed content for each objection pop-up window, as defined in the HTML `objections` object. Each description includes the title (where applicable) and the text content of the pop-up.
+
+**10.1. I Don't Have Time Objection**
+
+*   **Title:** "I Don't Have Time Objection" (blue color, bold).
+*   **Content:**
+    ```
+    I completely understand that you're busy.
+    I'm not trying to sell anything;
+    I just want an opportunity
+    to earn your business.
+
+    What I’ll cover with you
+    is quick and valuable,
+    and it could protect
+    your home in the future.
+
+    <span style="color:black; font-weight:bold;">May I ask the age of your roof?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **1 to 4 years Shingle and Cedar:** (Red button, label "1 to 4 years Shingle and Cedar", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **5+ Year Shingle and Cedar:** (Green button, label "5+ Year Shingle and Cedar", function: `showPopup('noTimeQualified')`). Function: Triggers the "noTimeQualified" pop-up window.
+    *   **1 year+ Metal & Tile:** (Green button, label "1 year+ Metal & Tile", function: `showPopup('noTimeQualified')`). Function: Triggers the "noTimeQualified" pop-up window.
+    *   **notInterestedCloser:** (Red button, label "Not Interested Closer", function: `showPopup('notInterestedCloserObjection')`). Function: Triggers the "Not Interested Closer Objection" pop-up window.
+    *   **noDamage:** (Red button, label "noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+    *   **sellingHouse:** (Red button, label "sellingHouse", function: `showPopup('sellingMyHome')`). Function: Triggers the "Selling My Home Objection" pop-up window.
+    *   **claimDenied:** (Red button, label "claimDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **hasAContractor:** (Red button, label "hasAContractor", function: `showPopup('hasAContractor')`). Function: Triggers the "hasAContractor" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.2. I Am Not Interested Objection**
+
+*   **Title:** "I Am Not Interested Objection" (blue color, bold).
+*   **Content:**
+    ```
+    I can understand why
+    you may not be interested right now,
+    BUT
+
+    <span style="color:black; font-weight:bold;">May I ask the age of your roof?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **1 to 4 years Shingle and Cedar:** (Red button, label "1 to 4 years Shingle and Cedar", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **5+ Year Shingle and Cedar:** (Green button, label "5+ Year Shingle and Cedar", function: `showPopup('noTimeQualified')`). Function: Triggers the "noTimeQualified" pop-up window.
+    *   **1 year+ Metal & Tile:** (Green button, label "1 year+ Metal & Tile", function: `showPopup('noTimeQualified')`). Function: Triggers the "noTimeQualified" pop-up window.
+    *   **1 MONTH TO 11 MONTHS Metal & Tile:** (Red button, label "1 MONTH TO 11 MONTHS Metal & Tile", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **notInterestedCloser:** (Red button, label "Not Interested Closer", function: `showPopup('notInterestedCloserObjection')`). Function: Triggers the "Not Interested Closer Objection" pop-up window.
+    *   **noDamage:** (Red button, label "noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+    *   **sellingHouse:** (Red button, label "sellingHouse", function: `showPopup('sellingMyHome')`). Function: Triggers the "Selling My Home Objection" pop-up window.
+    *   **claimDenied:** (Red button, label "claimDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **hasAContractor:** (Red button, label "hasAContractor", function: `showPopup('hasAContractor')`). Function: Triggers the "hasAContractor" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.3. Asking for an Opportunity To Earn Youer Business**
+
+*   **Title:** "Asking for an Opportunity To Earn Youer Business" (blue color, bold).
+*   **Content:**
+    ```
+    "I’m not trying to sell you anything
+    or have you buy anything.
+    I’m just asking for an opportunity
+    to earn your business.
+
+    What I have to go over with you is important,
+    and I can promise you,
+    you will see the value
+    in what I have to say.
+
+    So, if I could
+    please have 30 seconds of your time,
+    I will not waste it.
+    ```
+*   **Buttons:**
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.4. NOT QUALIFIED ROOF AGE**
+
+*   **Title:** "NOT QUALIFIED ROOF AGE" (blue color, bold).
+*   **Content:**
+    ```
+    "With the age of your roof,
+    it is very unlikely that you have damages
+    as your roof is very new.
+
+    <span style="color:black; font-weight:bold;">END CALL</span>
+
+    CALL DISPOSITION, Not Qualified Roof Age."
+    ```
+*   **Buttons:**
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallAndSetDisposition('NQ-Roof Age')`). Function: Triggers the "END CALL" process and sets call disposition to "Not Qualified Roof Age".
+
+**10.5. Which Neighbors are you Inspecting**
+
+*   **Title:** "Which Neighbors are you Inspecting" (blue color, bold).
+*   **Content:**
+    ```
+    We respect our customers privacy,
+    so we don’t disclose any personal information
+    without their consent first.
+    BUT
+    We will be in the area doing our
+    appointments helping homeowners
+    get the support they need
+    and I would like to ge
+    t you on schedule as well.
+
+    Would Mornings or Afternoons work best for you
+    so we can a provide you
+    the free roof inspection
+    and discuss what we find
+    and how we can assist you as well?
+    ```
+*   **Buttons:**
+    *   **notInterestedClose:** (Red button, label "Not Interested Closer", function: `showPopup('notInterestedCloserObjection')`). Function: Triggers the "Not Interested Closer Objection" pop-up window.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.6. Not Interested Closer**
+
+*   **Title:** "Not Interested Closer" (blue color, bold).
+*   **Content:**
+    ```
+    You See, The reason I’m asking is because:
+
+    <li>You may not have any damages now,
+    BUT
+    The next storm may damage your roof.</li>
+
+    <li>You see Insurance companies
+    love to deny roofing claims
+    by saying everything is old damage.</li>
+
+    <li>The No Damage Inspection Report we provide
+    will protect you against that
+    it documents that your roof has
+    NO storm damages on it now.</li>
+
+    <li>Our goal is to protect you for the future.</li>
+
+    This is a free service we provide
+    as part of giving back to the areas
+    we provide services in.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.7. alreadyInspected**
+
+*   **Content:**
+    ```
+    When you had it inspected,
+    did the contractor provide you
+    with a report stating that the roof
+    is in good condition
+    and has no storm damages to it?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **alreadyInspectedNo:** (Red button, label "alreadyInspectedNo", function: `showPopup('alreadyInspectedNo')`). Function: Triggers the "alreadyInspectedNo" pop-up window.
+    *   **alreadyInspectedYes:** (Green button, label "alreadyInspectedYes", function: `showPopup('alreadyInspectedYes')`). Function: Triggers the "alreadyInspectedYes" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.8. No Damage Objection**
+
+*   **Title:** "No Damage Objection" (blue color, bold).
+*   **Content:**
+    ```
+    You might be right
+    that your roof doesn’t have any damage,
+    I’m not trying to sell you anything.
+    I am just asking you for anopportunity
+    to earn your business.
+
+    <span style="color:black; font-weight:bold;">May I ask the age of your roof?
+    and what type of roofing do you have</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **1 to 4 years Shingle and Cedar:** (Red button, label "1 to 4 years Shingle and Cedar", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **5+ Year Shingle and Cedar:** (Green button, label "5+ Year Shingle and Cedar", function: `showPopup('noTimeQualified')`). Function: Corrected function to trigger "noTimeQualified" pop-up.
+    *   **1 year+ Metal & Tile:** (Green button, label "1 year+ Metal & Tile", function: `showPopup('noTimeQualified')`). Function: Corrected function to trigger "noTimeQualified" pop-up.
+    *   **1 MONTH TO 11 MONTHS Metal & Tile:** (Red button, label "1 MONTH TO 11 MONTHS Metal & Tile", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **alreadyInspected:** (Red button, label "alreadyInspected", function: `showPopup('alreadyInspected')`). Function: Triggers the "alreadyInspected" pop-up window.
+    *   **metalRoof:** (Red button, label "metalRoof", function: `showPopup('metalRoof')`). Function: Triggers the "No Damage Metal Roof Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.9. No Damage Metal Roof Objection**
+
+*   **Title:** "No Damage Metal Roof Objection" (blue color, bold).
+*   **Content:**
+    ```
+    I understand, Metal roofs are durable
+    BUT
+    can still get damaged in severe storms
+
+    Our storm inspections can help identify
+    any issues preventing them
+    from worsening and ensuring your
+    roof continues to perform at its best
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.10. No Damage Metal Roof Age**
+
+*   **Title:** "No Damage Metal Roof Age" (blue color, bold).
+*   **Content:**
+    ```
+    May I ask the age of your METAL roof?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Yes Makes Sense:** (Red button, label "Yes Makes Sense", function: `showPopup('metalRoof')`). Function: Corrected function to trigger "metalRoof" pop-up.
+    *   **1 year+ Metal & Tile:** (Green button, label "1 year+ Metal & Tile", function: `showPopup('noTimeQualified')`). Function: Corrected function to trigger "noTimeQualified" pop-up.
+    *   **1 MONTH TO 11 MONTHS Metal & Tile:** (Red button, label "1 MONTH TO 11 MONTHS Metal & Tile", function: `showPopup('1to4ShinglesAndCedar')`). Function: Triggers the "1to4ShinglesAndCedar" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **insuranceAlreadyCame:** (Red button, label "insuranceAlreadyCame", function: `showPopup('insuranceAlreadyCame')`). Function: Triggers the "Insurance Already Did Inspection Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.11. Did Not Give Property Owners Name**
+
+*   **Title:** "Did Not Give Property Owners Name" (blue color, bold).
+*   **Content:**
+    ```
+    I would suggest you contact your landlord
+    and let them know there may be storm damages
+    to the roof
+    so they can get it inspected.
+
+    I thank you for taking my call
+    and I hope you have a great day.
+
+    <span style="color:red; font-weight:bold;">END THE CALL: Call Disposition-Not Qualified Not Owner</span>
+    ```
+*   **Buttons:**
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallAndSetDisposition('NQ-Not Property Owner')`). Function: Triggers the "END CALL" process and sets call disposition to "Not Qualified Not Owner".
+
+**10.12. They Are The Property Owner**
+
+*   **Title:** "They Are The Property Owner" (blue color, bold).
+*   **Content:**
+    ```
+    Great, Just so you know
+    we can work around your schedule,
+
+    WHAT TIME TOMORROW WORKS BEST FOR YOU
+    MORNING OR AFTERNOON?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+
+    (Give times available per calendar link on calendar tab.
+    We can schedule up the three days out.)
+    Get The Day and Time Confirmed
+    ```
+*   **Buttons:**
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **End Call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.13. Insurance Already Did Inspection Objection**
+
+*   **Title:** "Insurance Already Did Inspection Objection" (blue color, bold).
+*   **Content:**
+    ```
+    That’s great!
+    Did they find damages to your home?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **Waiting On Their Decision/ No Paperwork Yet:** (Yellow button, label "Waiting On Decision", function: `showPopup('waitingOnInsuranceDecisionObjection')`). Function: Triggers the "Waiting On Insurance Decision Objection" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **Found Damages-Have Insurance Estimate:** (Green button, label "Found Damages-Estimate", function: `showPopup('foundDamagesEstimateObjection')`). Function: Triggers the "Found Damages, Has Estimate Objection" pop-up window.
+    *   **Wants Estimate:** (Yellow button, label "Wants Estimate", function: `showPopup('wantsEstimateObjection')`). Function: Triggers the "Wants Estimate Objection" pop-up window.
+    *   **Has A Contractor:** (Red button, label "Has A Contractor", function: `showPopup('hasAContractor')`). Function: Triggers the "hasAContractor" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **End Call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.14. Why Can't I Call You Objection**
+
+*   **Title:** "Why Can't I Call You Objection" (blue color, bold).
+*   **Content:**
+    ```
+    Our company prefers to initiate the call,
+    I use an online dialer since I handle
+    a high volume of calls each day,
+    which makes it easier than a standard phone.
+
+    However, I can easily call you back directly
+    at a time that works best for you.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.15. Selling My Home Objection**
+
+*   **Title:** "Selling My Home Objection" (blue color, bold).
+*   **Content:**
+    ```
+    Since you're selling your home,
+    this is actually a great time
+    to get a storm inspection.
+
+    We document the roof’s condition,
+    which can be valuable for potential buyers
+    and help avoid any surprises
+    during the appraisal and inspection process.
+
+    Addressing any storm-related issues now
+    can also enhance curb appeal,
+    and if a new roof is needed,
+    it can increase the property’s value,
+    making your home even more
+    attractive to buyers.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **noDamage:** (Red button, label "noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+    *   **metalRoof:** (Red button, label "metalRoof", function: `showPopup('metalRoof')`). Function: Triggers the "No Damage Metal Roof Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.16. My Claim Was Denied Objection**
+
+*   **Title:** "My Claim Was Denied Objection" (blue color, bold).
+*   **Content:**
+    ```
+    I'm sorry to hear about your experience
+    with your insurance company.
+    We specialize in handling
+    situations like these,
+    and I can assure you
+    we are experts in this field
+    and and will make sure
+    you’re taken care of
+    every step of the way.
+
+    If we find damages to the property
+    we can get it taken care of properly!
+
+    So,
+    Would mornings or afternoons
+    work best for you?
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **WantsEstimate:** (Yellow button, label "WantsEstimate", function: `showPopup('wantsEstimateObjection')`). Function: Triggers the "Wants Estimate Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.17. Who Is The NIRC Objection**
+
+*   **Title:** "Who Is The NIRC Objection" (blue color, bold).
+*   **Content:**
+    ```
+    The NIRC is a non-profit organization
+    <ul>
+         <p><li>with a mission to protect and educate
+             property owners when dealing with insurance claims.</li></p>
+
+       <p></li>They assist property owners
+        who are having issues dealing
+        with their insurance companies.</li></p>
+
+       <p></li>They have a the Best of the Bes
+    Certified Contractor network
+    who all go through a very tough
+    background check against the company
+    and the owners.</li></p>
+    </ul>
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **WantsEstimate:** (Yellow button, label "WantsEstimate", function: `showPopup('wantsEstimateObjection')`). Function: Triggers the "Wants Estimate Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.18. Why Do You Need My Email Objection**
+
+*   **Title:** "Why Do You Need My Email Objection" (blue color, bold).
+*   **Content:**
+    ```
+    We need your email so I can
+    <ul>
+       <p><li>send you the email confirmation of the appointment</li> and .
+        <li>and so we can email you the
+    Certified No Damage Inspection
+     Report for your records.</p>
+
+    <p>We will not and do not use
+    your email for any other reason at all.</p>
+
+    <p> Just so you know,
+    even though we have your email.
+    Legally I still need to
+    ask permission to send you an email</p>
+
+    <p>So may I have permission to send you</p>
+    <ul>
+        <li>The Confirmation email.</li>
+        <li>And the No Damage Inspection Report if needed?.</li>
+    </ul>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **emailYes:** (Green button, label "emailYes", function: `showPopup('emailYes')`). Function: Triggers the "They Gave New Email Address" pop-up window.
+    *   **emailNo:** (Red button, label "emailNo", function: `showPopup('emailNo')`). Function: Triggers the "Did Not Give A New Email Address" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.19. They Gave New Email Address**
+
+*   **Title:** "They Gave New Email Address" (blue color, bold).
+*   **Content:**
+    ```
+    Thank you, Let me update the email
+    now in our records.
+
+    <span style="color:red; font-weight:bold;">Close and Move To Next Question</span>
+    ```
+*   **Buttons:**
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.20. Did Not Give A New Email Address**
+
+*   **Title:** "Did Not Give A New Email Address" (blue color, bold).
+*   **Content:**
+    ```
+    Not a problem, we will get it
+    later if needed.
+
+    <span style="color:red; font-weight:bold;">Close and Move To Next Question</span>
+    ```
+*   **Buttons:**
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.21. I Had a Bad Experience with Contractors In The Past**
+
+*   **Title:** "I Had a Bad Experience with Contractors In The Past" (blue color, bold).
+*   **Content:**
+    ```
+    I completely understand your concern.
+    Unfortunately, not all contractors
+    uphold the same standards.
+
+    That’s exactly why as a NIRC certified contractor
+    we stand out as an industry leadr
+
+    We’re fully licensed, insured,
+    and highly rated by homeowners just like you.
+
+    We prioritize quality work,
+    clear communication,
+    and customer satisfaction.
+
+    Now Let’s get the free Inspection scheduled
+    so you can experience the difference firsthand!
+
+    <span style="font-weight:bold;">DOES THAT SOUND LIKE A GOOD PLAN OF ATTACK?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **WantsEstimate:** (Yellow button, label "WantsEstimate", function: `showPopup('wantsEstimateObjection')`). Function: Triggers the "Wants Estimate Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.22. Does Not Have insurance Objection**
+
+*   **Title:** "Does Not Have insurance Objection" (blue color, bold).
+*   **Content:**
+    ```
+    Thank you for that information.
+    However, We require properties
+    to have homeowners insurance
+    to set up inspections.
+
+    Let me check real quick
+    to see if I have any COntractors
+    in the Area that are taking
+    properties with no Insurance
+    ```
+*   **Buttons:**
+    *   **NoInsuranceHaveAContractor:** (Green button, label "Check for Contractor", function: `showPopup('noInsuranceHaveContractorObjection')`). Function: Triggers the "No Insurance Have Contractor Objection" pop-up window.
+    *   **NoInsuranceDontHaveAContractor:** (Red button, label "No Insurance - No Contractor", function: `showPopup('NoInsuranceDontHaveAContractor')`). Function: Triggers the "No Contractor Taking 'No Insurance Appointments'" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+
+**10.23. No Contractor Taking "No Insurance Appointments"**
+
+*   **Title:** "No Contractor Taking 'No Insurance Appointments'" (blue color, bold).
+*   **Content:**
+    ```
+    I appreciate your time,
+    but we won’t be able to
+    help you at this time
+    as I dont have any cobtractors
+    in the area that are taking properties
+    with no insurance.
+
+    <span style="color:red; font-weight:bold;">END CALL-Call Disposition-No Insurance</span>
+    ```
+*   **Buttons:**
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallAndSetDisposition('No Insurance')`). Function: Triggers the "END CALL" process and sets call disposition to "No Insurance".
+
+**10.24. No Insurance Have A Contractor**
+
+*   **Title:** "No Insurance, Checking for Contractor" (blue color, bold).
+*   **Content:**
+    ```
+    "Thank you for waiting.
+
+    Unfortunately, at this moment, I do not have a contractor in your area who is able to take appointments for properties without homeowners insurance.
+
+    In the event that this changes in the future, would you like us to keep your information on file and reach out if a contractor becomes available?"
+    ```
+*   **Buttons:**
+    *   **yesKeepInfo:** (Green button, label "Yes, Keep Info", function: `handleNoInsuranceKeepInfo('yes')`). Function: Handles the scenario where the prospect wants to keep info on file.
+    *   **noDontKeepInfo:** (Red button, label "No, Don't Keep Info", function: `triggerEndCallAndSetDisposition('No Insurance')`). Function: Triggers the "END CALL" process and sets call disposition to "No Insurance".
+
+**10.25. noDecision**
+
+*   **Content:**
+    ```
+    "I understand your time is valuable,
+    BUT
+    Time is running out
+    to be able to get the damages covered
+    by your insurance carrier.
+
+    This will only take a few moments.
+
+    I am not trying to sell you anything
+    or have you by anything,
+    I am just asking for an opportunity
+    to earn your business.
+
+    What I have to go over with you
+    is important and
+    I can promise you will see
+    the value in what I have to say,
+
+    So,
+    If I could please have
+    30 seconds of your time
+    I will not waist it.
+
+    PAUSE AND WAIT FOR AN ANSWER."
+    ```
+*   **Buttons:**
+    *   **next:** (Green button, label "Continue", function: `nextPage()`). Function: Navigates to the next page of the main script, assuming the objection is overcome.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition if still indecisive.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.26. thirtySecondObjection**
+
+*   **Content:**
+    ```
+    "I understand you don’t
+    have the time right now,
+    but
+    I’m not trying to sell you anything.
+    I am just asking you for an
+    opportunity to earn your business.
+    What I have to go over
+    with you is important
+    and it will protect
+    you in the future.
+
+    I can promise you will see
+    the value in what I have to say
+    so if I could please
+    have 30 seconds of your time
+    I promise I will not waist it.
+
+    PAUSE AND WAIT FOR AN ANSWER!!"
+    ```
+*   **Buttons:**
+    *   **next:** (Green button, label "Continue", function: `nextPage()`). Function: Navigates to the next page of the main script, assuming the objection is overcome.
+    *   **Failed final try:** (Red button, label "Failed final try", function: `showPopup('failedFinalTryObjection')`). Function: Triggers the "Failed Final Try Objection" pop-up window which leads to call disposition if still time-constrained.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.27. yesRoofLeak**
+
+*   **Content:**
+    ```
+    "I am glad I asked,
+    I will make sure to let
+    the certified contractor know
+    so they can do an emergency repair
+    to stop the MORE damages from happening."
+    ```
+*   **Buttons:**
+    *   **close:** (Green button, label "Close", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+
+**10.28. noRoofLeak**
+
+*   **Content:**
+    ```
+    "That’s good news. you are
+    one of the lucky ones!"
+    ```
+*   **Buttons:**
+    *   **close:** (Green button, label "Close", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+
+**10.29. notOwner**
+
+*   **Content:**
+    ```
+    "We need to meet with
+    the property owner.
+    Could you provide your
+    landlord’s contact information
+    so we can arrange the inspection?
+
+    PAUSE AND WAIT FOR AN ANSWER!!"
+    ```
+*   **Buttons:**
+    *   **getInfo:** (Green button, label "Get Landlord Info", function: `handleGetLandlordInfo()`). Function: Function to handle getting landlord information (e.g., opens input fields or notes section).
+    *   **noLandlordInfo:** (Red button, label "No Landlord Info", function: `showPopup('noLandlordInfoObjection')`). Function: Triggers the "No Landlord Info Objection" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect is uncooperative.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the prospect is not the owner and unwilling to provide landlord info.
+
+**10.30. hasAContractor**
+
+*   **Content:**
+    ```
+    "I’m glad you have someone helping.
+    If you do have any issues
+    feel free to reach out to us.
+
+    I thank you for your time
+    and I hope you have a great day.
+
+    END CALL CALL
+    DISPOSITION Not Qualified Contractor."
+    ```
+*   **Buttons:**
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallAndSetDisposition('NQ-Has Contractor')`). Function: Triggers the "END CALL" process and sets call disposition to "Not Qualified Contractor".
+
+**10.31. nameInsuranceYes**
+
+*   **Content:**
+    ```
+    "Thank you, we have been
+    dealing a lot with them
+    and have been very successful
+    for our clients."
+    ```
+*   **Buttons:**
+    *   **close:** (Green button, label "Close", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+
+**10.32. nameInsurancNo**
+
+*   **Content:**
+    ```
+    "No problem; we can get that
+    information later if you have damages."
+    ```
+*   **Buttons:**
+    *   **close:** (Green button, label "Close", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+
+**10.33. noContractor**
+
+*   **Content:**
+    ```
+    "That’s fine; we’ll
+    handle everything for you."
+    ```
+*   **Buttons:**
+    *   **close:** (Green button, label "Close", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+
+**10.34. nothingIsForFree**
+
+*   **Content:**
+    ```
+    "Rather than investing heavily
+    in marketing campaigns,
+    we prefer to provide you,
+    our valued customer,
+    with a free roof inspection.
+
+    This way, you can
+    experience our service
+    first hand and gain a clear,
+    honest assessment of
+    your roof’s condition.
+
+    It's like a free trial
+    with no obligations
+    our goal is to build trust
+    by offering a free property inspection
+    and seeing how we
+    can assist you with
+    any storm restoration needs.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!!</span>
+    ```
+*   **Buttons:**
+    *   **yesMakesSense:** (Green button, label "Yes, Makes Sense", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+    *   **noDoesntMakeSense:** (Red button, label "No, Doesn't Make Sense", function: `showPopup('doesntMakeSenseObjection')`). Function: Triggers the "Doesn't Make Sense Objection" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect remains unconvinced.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.35. myNumber**
+
+*   **Content:**
+    ```
+    "We use storm maps to get info
+    for areas that have been affected
+    and we use public city records
+    to access the information.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!!</span>
+    ```
+*   **Buttons:**
+    *   **yesMakesSense:** (Green button, label "Yes, Makes Sense", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+    *   **noDoesntMakeSense:** (Red button, label "No, Doesn't Make Sense", function: `showPopup('doesntMakeSenseObjection')`). Function: Triggers the "Doesn't Make Sense Objection" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect remains unconvinced.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.36. failed**
+
+*   **Content:**
+    ```
+    "If I may ask you one last question?.
+    Would you please help me understand
+    why you are not interested
+    in the appointment and
+    how I failed to relay to you
+    the importance of this call.
+    So I don’t make
+    the same mistake with anyone else.
+    I am trying to help people and
+    I would really appreciate
+    knowing how I failed you!
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!!</span>
+    ```
+*   **Buttons:**
+    *   **failResponse:** (Green button, label "Give Fail Response", function: `showPopup('failResponse')`). Function: Triggers the "failResponse" pop-up window to continue the attempt.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect is still not interested.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.37. spamObjection**
+
+*   **Content:**
+    ```
+    "I understand your concern,
+    and I'm sorry for any confusion.
+    Due to the high volume of calls
+    we make to assist customers
+    after severe weather,
+    our number can sometimes
+    be flagged as spam
+    by certain systems.
+
+    We aim to provide
+    valuable support and services,
+    and we’re always here to help.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!!</span>
+    ```
+*   **Buttons:**
+    *   **yesMakesSense:** (Green button, label "Yes, Makes Sense", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+    *   **noDoesntMakeSense:** (Red button, label "No, Doesn't Make Sense", function: `showPopup('doesntMakeSenseObjection')`). Function: Triggers the "Doesn't Make Sense Objection" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect remains unconvinced.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.38. failResponse**
+
+*   **Content:**
+    ```
+    "Thank you for that,
+    so if you would humor me,
+    I am just asking for an
+    opportunity to earn your business.
+    What I must go over with you
+    is important and I can promise you
+    will see the value
+    in what I have to say,
+    so if I could please have
+    30 seconds of your time
+    I will not waist it.
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!!</span>
+    ```
+*   **Buttons:**
+    *   **next:** (Green button, label "Continue", function: `nextPage()`). Function: Navigates to the next page of the main script, assuming the objection is overcome.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect is still not interested.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.39. dontHaveInfo**
+
+*   **Content:**
+    ```
+    "Can I call you later today
+    or before the inspection tomorrow morning
+    so I can reach out to them
+    that day to get them
+    all taken care of?
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!!</span>
+    ```
+*   **Buttons:**
+    *   **yesCallBack:** (Green button, label "Yes, Call Back", function: `handleCallBackRequest('yes')`). Function: Handles the scenario where the prospect agrees to a callback.
+    *   **noCallBack:** (Red button, label "No, Don't Call Back", function: `triggerEndCallAndSetDisposition('Not Available')`). Function: Triggers the "END CALL" process and sets call disposition to "Not Available".
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect is uncooperative.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.40. 1to4ShinglesAndCedar**
+
+*   **Content:**
+    ```
+    "With the age of your roof,
+    it is very unlikely that
+    you have damages as
+    your roof is very new.
+    Thank you for your time,
+    and I hope you have a great day.
+
+    END THE Call
+    Call Disposition, Not Qualified Roof Age."
+    ```
+*   **Buttons:**
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallAndSetDisposition('NQ-Roof Age')`). Function: Triggers the "END CALL" process and sets call disposition to "Not Qualified Roof Age".
+
+**10.41. referralater**
+
+*   **Content:**
+    ```
+    "Thank you for the referral,
+    But
+    Can I get the info today
+    so I can Reach out to them today
+    and make sure I can
+    get it all set up
+    for the same day.
+    This way we can inspect
+    their roof right after yours.
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!!</span>
+    ```
+*   **Buttons:**
+    *   **yesGiveInfoNow:** (Green button, label "Yes, Give Info Now", function: `handleReferralInfoNow('yes')`). Function: Handles the scenario where the prospect provides referral info now.
+    *   **noCallLater:** (Yellow button, label "No, Call Later", function: `handleReferralInfoLater('no')`). Function: Handles the scenario where the prospect will provide referral info later.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect is uncooperative.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.42. alreadyInspectedYes**
+
+*   **Content:**
+    ```
+    "I’m glad to hear that.
+    Thank you for your time
+    and have a great day.
+
+    END CALL
+    CALL DISPOSITION, Not Qualifiued Has Contractor."
+    ```
+*   **Buttons:**
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallAndSetDisposition('NQ-Has Contractor')`). Function: Corrected disposition and triggers "END CALL" process and sets call disposition to "Not Qualified Contractor".
+
+**10.43. alreadyInspectedNo**
+
+*   **Content:**
+    ```
+    "You See, The reason I’m asking is because:
+    <ul>
+        <li>You may not have any damages now,
+        BUT
+        The next storm may damage your roof.</li>
+        <li>You see Insurance companies
+        love to deny roofing claims
+        by saying everything is old damage.</li>
+        <li>The No Damage Inspection Report we provide
+        will protect you against that
+         as it documents that your roof has
+        NO storm damages on it now.</li>
+        <li>Our goal is to protect you for the future.</li>
+    </ul>
+
+    This is a free service we provide
+    as part of giving back
+    to the areas we provide services in.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">PAUSE AND WAIT FOR AN ANSWER!</span>"
+    ```
+*   **Buttons:**
+    *   **yesMakesSense:** (Green button, label "Yes, Makes Sense", function: `closePopup()`). Function: Closes the current pop-up window and continues with the script.
+    *   **noDoesntMakeSense:** (Red button, label "No, Doesn't Make Sense", function: `showPopup('doesntMakeSenseObjection')`). Function: Triggers the "Doesn't Make Sense Objection" pop-up window.
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window if prospect remains unconvinced.
+    *   **end call:** (Red button, label "End Call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process if the objection cannot be overcome.
+
+**10.44. Selling My Home Objection**
+
+*   **Title:** "Selling My Home Objection" (blue color, bold).
+*   **Content:**
+    ```
+    Since you're selling your home,
+    this is actually a great time
+    to get a storm inspection.
+
+    We document the roof’s condition,
+    which can be valuable for potential buyers
+    and help avoid any surprises
+    during the appraisal and inspection process.
+
+    Addressing any storm-related issues now
+    can also enhance curb appeal,
+    and if a new roof is needed,
+    it can increase the property’s value,
+    making your home even more
+    attractive to buyers.
+
+    <span style="font-weight:bold;">DOES THAT MAKE SENSE?</span>
+
+    <span style="color:red; font-weight:bold;">NOW WAIT FOR THEM TO RESPOND</span>
+    ```
+*   **Buttons:**
+    *   **Not Interested:** (Red button, label "Not Interested", function: `showPopup('notInterested')`). Function: Triggers the "I Am Not Interested Objection" pop-up window.
+    *   **myClaimWasDenied:** (Red button, label "myClaimWasDenied", function: `showPopup('myClaimWasDenied')`). Function: Triggers the "My Claim Was Denied Objection" pop-up window.
+    *   **noDamage:** (Red button, label "noDamage", function: `showPopup('noDamage')`). Function: Triggers the "No Damage Objection" pop-up window.
+    *   **metalRoof:** (Red button, label "metalRoof", function: `showPopup('metalRoof')`). Function: Triggers the "No Damage Metal Roof Objection" pop-up window.
+    *   **noTime:** (Red button, label "noTime", function: `showPopup('noTime')`). Function: Triggers the "I Don't Have Time Objection" pop-up window.
+    *   **Previous:** (Grey button, label "Previous", function: `showPreviousObjectionPopup()`). Function: Navigates back to the previous objection pop-up window or script page.
+    *   **next:** (Green button, label "next", function: `nextPage()`). Function: Navigates to the next page of the main script.
+    *   **end call:** (Red button, label "end call", function: `triggerEndCallProcess()`). Function: Triggers the "END CALL" process.
+---
+
+**11. Call Disposition Pop-up Window Details**
+
+The "CALL DISPOSITION" pop-up window is crucial for categorizing call outcomes and initiating post-call actions.
+
+**11.1. Call Disposition Options (Detailed Descriptions)**
+
+The following are the detailed descriptions for each call disposition option:
+
+*   ➤ Not Qualified Roof Age (NQ-Roof Age): Select this option when the call is not qualified because the prospect's roof age is too new to likely have storm damage. This disposition indicates a lead that is unlikely to convert due to roof age.
+*   ➤ Not Qualified Not Owner (NQ-Not Property Owner): Select this option when the call is not qualified because the prospect is not the property owner or decision-maker, and contact with the owner is not established. This disposition indicates a lead that cannot be pursued further without owner contact.
+*   ➤ No Insurance (2025 DENIED): Select this option when the call is denied because the prospect does not have homeowners insurance, which is a requirement for the service. This disposition indicates a lead that is ineligible due to lack of insurance. The "2025 DENIED" likely refers to a denial code or internal tracking.
+*   ➤ Not Qualified Contractor (2025 DENIED): Select this option when the call is denied because the prospect already has a contractor and is not interested in switching. This disposition indicates a lead that is not viable due to existing contractor relationship. The "2025 DENIED" likely refers to a denial code or internal tracking.
+*   ➤ Not Qualifiued Has Contractor (NQ-Has Contractor): This is likely a duplicate or slightly different phrasing of "Not Qualified Contractor". Select this option for the same reason - prospect already has a contractor.
+*   ➤ Not Available (Not Available): Select this option when the prospect is not available to talk or schedule an appointment at this time, and no callback is scheduled. This disposition indicates a lead that is currently unreachable.
+*   ➤ Not Interested (Not Interested): Select this option when the prospect explicitly states they are not interested in the service, regardless of qualification. This disposition indicates a lead that has opted out.
+*   ➤ Bad Info (NQ-Bad Info): Select this option when the information obtained during the call (e.g., phone number, address) is determined to be incorrect or invalid. This disposition indicates a lead that is unusable due to bad data.
+*   ➤ Wrong Number (Wrong Number): Select this option when the call reaches a wrong number, and the intended prospect is not reached. This disposition indicates a lead that is invalid due to incorrect contact information.
+*   ➤ Call Back (Call Back): Select this option when the prospect requests a call back at a later time, and a callback is scheduled. This disposition indicates a lead that requires follow-up at a specified time.
+
+**11.2. EXPORT PDF Functionality (Detailed Description)**
+
+The "EXPORT PDF" functionality provides agents with the ability to generate professional PDF reports based on call data.
+
+1.  **Template Selection:** Upon clicking "EXPORT PDF", the agent is presented with a clear selection of 4 PDF templates: "Appointment Set-Review.txt", "Approved Appointment.txt", "Confirmation Call Needed.txt", and "Denied Appointment.txt". These templates should be presented with descriptive names or previews to aid selection.
+2.  **PDF Generation and Data Population:** Once a template is selected, the application automatically generates a PDF document. The PDF is pre-populated with the data entered in the "CALLER DATA & INFO" panel. Placeholders within the selected template (e.g., `(Profile.First Name)`, `(Profile.Address)`) are dynamically replaced with the corresponding data field values.
+3.  **PDF Preview and Editing:** The generated PDF is displayed in a preview window, allowing the agent to review the document before exporting. Crucially, the preview window should enable in-place editing of the PDF content. Agents can directly modify text fields, correct errors, or add notes within the preview.
+4.  **Export to "EXPORTS" Folder:** After reviewing and editing (if necessary), the agent clicks the "EXPORT" button. The application then saves the PDF document to the "EXPORTS" folder, which is located in the same directory as the main application executable. The exported PDF file should be named in a meaningful way, possibly including the customer's name and appointment date/time for easy identification. A success message should confirm the export location.
+5.  **"BACK" Button:** If the agent decides not to export the PDF or needs to make changes, clicking the "BACK" button closes the PDF preview window and returns the agent to the "CALL DISPOSITION" pop-up window, preserving the entered data and disposition selection.
+
+**11.3. SEND EMAIL Functionality (Detailed Description)**
+
+The "SEND EMAIL" functionality allows agents to quickly send email reports based on call data, using the same templates as PDF export.
+
+1.  **Template Selection (Email):** Similar to PDF export, clicking "SEND EMAIL" presents the agent with the same 4 templates: "Appointment Set-Review.txt", "Approved Appointment.txt", "Confirmation Call Needed.txt", and "Denied Appointment.txt". The template selection interface should be consistent with the PDF export template selection.
+2.  **Email Generation and Data Population:** Upon template selection, the application generates an email body using the chosen template. Data from the "CALLER DATA & INFO" panel is automatically populated into the email body, replacing template placeholders.
+3.  **Email Preview and Editing:** An email preview window is displayed, showing the pre-populated email. This preview includes:
+    *   **To:** Field pre-filled with "softwaredevmanager@assurecall.com" (but editable).
+    *   **Subject:** Field, which can be template-specific or a default subject line, also editable.
+    *   **Body:** The generated email body, fully editable.
+    The agent can modify any part of the email – recipient, subject, and body text – directly in the preview window.
+4.  **Sending via GMAIL SMTP:** After reviewing and editing, the agent clicks the "SEND" button. The application then uses the specified GMAIL SMTP settings to send the email. The settings are:
+    *   SMTP Server Address: smtp.gmail.com
+    *   Authentication: Yes
+    *   Secure Connection: TLS/SSL (Port 465 for SSL, Port 587 for TLS)
+    *   SMTP Username: softwaredevmanager@roofingappointment.com
+    *   SMTP Password: Iflyplanes123!
+    The application should handle SMTP connection and sending securely, including error handling for failed email sending (e.g., network issues, authentication failures). A success message should confirm successful email sending.
+5.  **"BACK" Button (Email):** If the agent decides not to send the email or needs to make changes, clicking the "BACK" button closes the email preview window and returns the agent to the "CALL DISPOSITION" pop-up window, preserving the entered data and disposition selection.
+
+**11.4. PDF Templates (Full Content)**
+
+The full content of the 4 PDF templates, also used as email templates, is provided below for reference during Python development. These templates are plain text and will need to be processed to replace placeholders and format them appropriately for PDF and email output.
+
+*   **"Appointment Set-Review.txt"**: (Content already provided in section 4.5.3.2.3)
+*   **"Approved Appointment.txt"**: (Content already provided in section 4.5.3.2.3)
+*   **"Confirmation Call Needed.txt"**: (Content already provided in section 4.5.3.2.3)
+*   **"Denied Appointment.txt"**: (Content already provided in section 4.5.3.2.3)
+
+---
+
+**12. Data Flow and Variable Mapping**
+
+To ensure data consistency and accurate population of templates and API calls, a clear understanding of data flow and variable mapping is essential.
+
+**12.1. Data Fields in CALLER DATA & INFO Panel**
+
+The "CALLER DATA & INFO" panel contains the following data fields, which will be stored as variables in the Python application:
+
+**Customer Information:**
+
+*   `customer_name` (Text Input)
+*   `address` (Text Input)
+*   `city` (Text Input)
+*   `state` (Text Input)
+*   `zip_code` (Text Input)
+*   `phone_number` (Text Input)
+*   `cell_number` (Text Input)
+*   `email` (Text Input)
+
+**Roofing Information:**
+
+*   `stories` (Dropdown Select - "1 Story", "1.5 Stories", "2 Stories")
+*   `roof_age` (Dropdown Select - "1-4 Years", "5-9 Years", "10+ Years")
+*   `roof_type` (Dropdown Select - "Shingles", "Metal", "Tile", "Cedar Shake")
+
+**Insurance and Appointment Information:**
+
+*   `homeowners_insurance` (Dropdown Select - "Yes", "No")
+*   `insurance_company` (Text Input - Enabled only if `homeowners_insurance` is "Yes")
+*   `decision_maker` (Dropdown Select - "Yes", "No")
+*   `contractor` (Dropdown Select - "Yes", "No")
+*   `appointment_date` (Date Input - mm/dd/yyyy)
+*   `appointment_time` (Dropdown Select - "9:00 AM" to "7:00 PM")
+
+**12.2. ReadyMode API Parameters Mapping**
+
+When submitting lead data to the ReadyMode API (though direct lead posting via API is not explicitly requested in the prompt, it's good practice to consider for future enhancement or if needed for certain dispositions), the data from the "CALLER DATA & INFO" panel needs to be mapped to the ReadyMode API parameters as defined in the "READYMODE API & DATA/INFORMATION" section of the prompt.
+
+Here's a potential mapping based on the provided ReadyMode API documentation and the "CALLER DATA & INFO" fields:
+
+| **CALLER DATA & INFO Field**        | **ReadyMode API Parameter**       | **Notes**                                                                 |
+|-------------------------------------|-----------------------------------|---------------------------------------------------------------------------|
+| `customer_name`                     | `lead[0][firstName]`             | Split into first and last name if possible, or use full name in firstName |
+| `customer_name`                     | `lead[0][lastName]`              | Split into first and last name if possible, or leave blank if not available |
+| `phone_number`                      | `lead[0][phone]`                 | Primary phone number                                                        |
+| `cell_number`                       | `lead[0][phone3]`                | Cell phone number                                                           |
+| `address`                           | `lead[0][address]`               | Street address                                                              |
+| `city`                              | `lead[0][city]`                  | City                                                                        |
+| `state`                             | `lead[0][state]`                 | State (ISO 3166-2 format)                                                 |
+| `zip_code`                          | `lead[0][zip]`                   | Zip code                                                                    |
+| `email`                             | `lead[0][email]`                 | Email address                                                               |
+| `roof_type`                         | `lead[0][Custom_1]`              | Roof Type (map dropdown values to ReadyMode values if needed)              |
+| `roof_age`                          | `lead[0][Custom_2]`              | Roof Age (map dropdown values to ReadyMode values if needed)               |
+| `stories`                           | `lead[0][Custom_3]`              | How Many Stories (map dropdown values to ReadyMode values if needed)       |
+| `contractor`                        | `lead[0][Custom_4]`              | Has Contractor (map dropdown values to ReadyMode values if needed)          |
+| `homeowners_insurance`              | `lead[0][Custom_5]`              | Has Insurance (map dropdown values to ReadyMode values if needed)           |
+| `insurance_company`                 | `lead[0][Custom_6]`              | Insurance Co. Name                                                        |
+| *Agent Notes (from transcript)*     | `lead[0][Custom_7]`              | Call Notes (capture agent notes during call, if implemented)             |
+| `appointment_date` + `appointment_time` | `lead[0][Custom_8]`              | Appointment Date/Time (combine date and time into datetime format)        |
+| *Appointment Confirmed (from script)* | `lead[0][Custom_9]`              | Appointment Confirmed (capture confirmation status from script flow)      |
+| *Roof Leaks (from script)*          | `lead[0][Custom_10]`             | Roof Leaks (capture roof leak information from script flow)               |
+| *Confirmed Address (from script)*     | `lead[0][Custom_14]`             | Confirmed Address (capture address confirmation from script flow)         |
+| *Confirmed Property Owner (script)* | `lead[0][Custom_16]`             | Confirmed Property Owner (capture owner confirmation from script flow)     |
+
+*Note: Some fields like "Call Notes", "Appointment Confirmed", "Roof Leaks", "Confirmed Address", "Confirmed Property Owner" are not directly present in the "CALLER DATA & INFO" panel but can be captured during the call flow and script interaction and then mapped to ReadyMode API parameters if needed for lead posting or updates.*
+
+**12.3. PDF Template Variable Mapping**
+
+The placeholders in the PDF templates (and email templates) need to be mapped to the data fields from the "CALLER DATA & INFO" panel. Based on the template examples and placeholder names like `(Profile.First Name)`, `(Profile.Last Name)`, `(Profile.Address)`, `(Profile.City)`, `(Profile.State)`, `(Profile.Zip Code)`, `(Profile.Phone Number)`, `(Profile.Cell Phone)`, `(Profile.Email)`, `(Profile.Roof Type)`, `(Profile.Roof Age)`, `(Profile.How Many Stories is House)`, `(Profile.Has Insurance)`, `(Profile. Insurance Co. Name)`, `(Profile.Call Notes)`, `(Profile.Appointment Time.Date)`, `(Profile.Appointment Time.Time)`, `(Profile.Appointment Confirmed)`, `(Lead.campaign)`, the mapping can be inferred as follows:
+
+| **Template Placeholder**            | **CALLER DATA & INFO Field**        | **Notes**                                                                 |
+|-------------------------------------|-------------------------------------|---------------------------------------------------------------------------|
+| `(Profile.First Name)`              | `customer_name`                     | Extract first name from `customer_name` if possible                        |
+| `(Profile.Last Name)`               | `customer_name`                     | Extract last name from `customer_name` if possible                         |
+| `(Profile.Address)`                 | `address`                           |                                                                           |
+| `(Profile.City)`                    | `city`                              |                                                                           |
+| `(Profile.State)`                   | `state`                             |                                                                           |
+| `(Profile.Zip Code)`                | `zip_code`                          |                                                                           |
+| `(Profile.Phone Number)`            | `phone_number`                      |                                                                           |
+| `(Profile.Cell Phone)`              | `cell_number`                       |                                                                           |
+| `(Profile.Email)`                   | `email`                             |                                                                           |
+| `(Profile.Roof Type)`               | `roof_type`                         |                                                                           |
+| `(Profile.Roof Age)`                | `roof_age`                          |                                                                           |
+| `(Profile.How Many Stories is House)` | `stories`                           |                                                                           |
+| `(Profile.Has Insurance)`           | `homeowners_insurance`              |                                                                           |
+| `(Profile. Insurance Co. Name)`     | `insurance_company`                 |                                                                           |
+| `(Profile.Call Notes)`              | *Agent Notes (from transcript)*     | Capture agent notes during call, if implemented                             |
+| `(Profile.Appointment Time.Date)`   | `appointment_date`                  | Format `appointment_date` to mm/dd/yyyy                                   |
+| `(Profile.Appointment Time.Time)`   | `appointment_time`                  |                                                                           |
+| `(Profile.Appointment Confirmed)`   | *Appointment Confirmed (from script)* | Capture confirmation status from script flow                               |
+| `(Lead.campaign)`                   | *Campaign Name (Hardcoded/Config)*  | Campaign name - likely hardcoded or configurable in the application        |
+
+*Note: `(Lead.campaign)` is likely a static value representing the campaign name and needs to be determined and configured in the Python application. `(Profile.Call Notes)` and `(Profile.Appointment Confirmed)` are placeholder examples and need to be implemented if agent note-taking and appointment confirmation tracking are desired features.*
+
+**12.4. Email Template Variable Mapping**
+
+The email templates use the same placeholders as the PDF templates. Therefore, the variable mapping for email templates is identical to the PDF template variable mapping described in section 12.3. The Python application should reuse the same data mapping logic for both PDF and email generation to ensure consistency.
+
+---
+
+**13. Error Handling and Validation**
+
+Robust error handling and validation are crucial for a production-ready application.
+
+**13.1. Login Error Handling**
+
+*   **Invalid Credentials:** Handle ReadyMode API error responses indicating invalid username or password. Display a clear error message to the user on the login screen, prompting them to re-enter credentials.
+*   **API Connection Errors:** Handle potential network errors or ReadyMode API downtime. Display an error message if the application cannot connect to the API, suggesting the user check their internet connection or try again later.
+*   **Rate Limiting:** Although unlikely during login, be aware of ReadyMode API rate limits. Implement retry mechanisms with exponential backoff if rate limits are encountered during login (or any API call).
+
+**13.2. Lead Search Error Handling**
+
+*   **No Lead Found:** Handle the case where the ReadyMode API "SEARCH" endpoint returns no lead data for a given phone number. Display a user-friendly message indicating that no lead was found.
+*   **API Errors During Search:** Handle any API errors during lead search (e.g., network errors, API server errors, invalid API request). Display an appropriate error message to the user, indicating that lead search failed and suggesting they try again.
+*   **Data Parsing Errors:** Implement error handling for parsing the JSON response from the ReadyMode API. If the response format is unexpected or data is missing, handle gracefully and log the error for debugging.
+
+**13.3. Form Validation**
+
+*   **Required Fields:** Implement client-side validation to ensure all required fields in the "CALLER DATA & INFO" panel are filled before proceeding with call disposition or data export/email. Display clear error messages highlighting missing fields.
+*   **Data Format Validation:** Validate data formats for email, phone number, and zip code using regular expressions or appropriate validation libraries. Display specific error messages for invalid formats.
+*   **Real-time Validation (Optional):** Consider implementing real-time validation as the agent enters data, providing immediate feedback on field validity (e.g., using visual cues like border color changes).
+
+**13.4. Email Sending Error Handling**
+
+*   **SMTP Connection Errors:** Handle errors during connection to the GMAIL SMTP server (e.g., network errors, incorrect SMTP settings). Display an error message if email sending fails due to connection issues.
+*   **Authentication Errors (SMTP):** Handle SMTP authentication failures (e.g., incorrect username or password). Display an error message if authentication fails, suggesting the user check SMTP settings (though these settings are pre-defined and not user-editable in this application).
+*   **Email Sending Failures:** Handle errors during the email sending process itself (e.g., recipient address errors, message size limits, server errors). Display a general email sending failure message if sending fails.
+*   **Logging Email Errors:** Log all email sending errors for debugging and monitoring purposes, including error details and timestamps.
+
+**13.5. PDF Export Error Handling**
+
+*   **Template Loading Errors:** Handle errors if the application fails to load PDF templates from files. Display an error message if templates cannot be loaded, indicating a potential application setup issue.
+*   **PDF Generation Errors:** Handle errors during PDF generation (e.g., data population errors, PDF library errors). Display a general PDF generation failure message if PDF creation fails.
+*   **File Export Errors:** Handle errors during file export to the "EXPORTS" folder (e.g., file system permissions issues, disk space errors). Display an error message if PDF export fails, suggesting the user check folder permissions or disk space.
+*   **Logging PDF Errors:** Log all PDF export errors for debugging and monitoring purposes, including error details and timestamps.
+
+---
+
+**14. Future Enhancements and Considerations**
+
+While this overview aims to create a fully functional application, several enhancements and considerations can be addressed in future development phases to further improve the Storm911 application.
+
+*   **Agent Note-Taking:** Implement a dedicated "Agent Notes" field in the "CALLER DATA & INFO" panel or a separate notes section in the "TRANSCRIPT" panel. This would allow agents to capture specific details during calls that are not covered by the structured data fields. These notes could then be included in PDF/email reports and potentially synced back to ReadyMode as call notes.
+*   **Call Recording Integration:** Explore integration with call recording systems, if available, to automatically attach call recordings to lead data or PDF/email reports. This would enhance quality control and review processes.
+*   **Calendar Integration:** Integrate with a calendar system (e.g., Google Calendar, Outlook Calendar) to allow agents to directly schedule appointments and check availability within the application. This would streamline appointment scheduling and reduce manual calendar management.
+*   **Automated Lead Posting to ReadyMode:** Implement automated lead posting to ReadyMode via the API after an appointment is set or call disposition is finalized. This would ensure data consistency between the application and ReadyMode CRM.
+*   **Advanced Reporting and Analytics:** Develop reporting and analytics dashboards to track agent performance, call outcomes, disposition statistics, and other key metrics. This would provide valuable insights for management and process optimization.
+*   **Customizable Script and Objections:** Allow for customization of the call script and objection responses, enabling administrators to update and adapt the content based on campaign changes or performance analysis.
+*   **User Roles and Permissions:** Implement user roles and permissions to control access to different features and functionalities based on agent roles or administrative levels.
+*   **GUI Theme Customization:** Allow users to customize the GUI theme (colors, fonts) to personalize their application experience.
+*   **Multi-Language Support:** Consider adding multi-language support to cater to agents and prospects in different language regions.
+*   **Performance Optimization:** Optimize the application for performance, ensuring fast loading times, smooth GUI interactions, and efficient API calls, especially when handling large volumes of data or concurrent users.
+*   **Comprehensive Testing:** Conduct thorough testing throughout the development process, including unit testing, integration testing, and user acceptance testing, to ensure application stability, functionality, and user-friendliness.
+*   **Security Considerations:** Implement robust security measures to protect user credentials, API keys, and sensitive lead data. Follow security best practices for data storage, transmission, and authentication. Regularly review and update security protocols.
+
+These future enhancements can be prioritized and implemented based on business needs, user feedback, and resource availability, continuously improving the Storm911 application and maximizing its value for roofing appointment scheduling operations.
+
+
+#########################################################################################
+# END OF Program Overview Report: Storm911 Application
+#########################################################################################
