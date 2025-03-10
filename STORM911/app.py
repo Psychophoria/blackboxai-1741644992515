@@ -15,6 +15,10 @@ from config import APP_NAME, APP_VERSION
 class Storm911App:
     def __init__(self):
         """Initialize Storm911 application"""
+        # Configure customtkinter
+        ctk.set_appearance_mode("dark")
+        ctk.set_default_color_theme("blue")
+        
         # Initialize application components
         self.initializer = AppInitializer()
         self.root: Optional[ctk.CTk] = None
@@ -113,6 +117,103 @@ class Storm911App:
         except Exception as e:
             logging.error(f"Error creating header: {str(e)}")
             raise
+    
+    def create_caller_info_panel(self, parent: ctk.CTkFrame) -> None:
+        """Create caller information panel"""
+        from caller_info_panel import CallerInfoPanel
+        panel = CallerInfoPanel(self.root, self.managers, self.handlers)
+        panel.create_panel(parent)
+    
+    def create_transcript_panel(self, parent: ctk.CTkFrame) -> None:
+        """Create transcript panel"""
+        from transcript_panel import TranscriptPanel
+        panel = TranscriptPanel(self.root, self.managers, self.handlers)
+        panel.create_panel(parent)
+    
+    def create_objections_panel(self, parent: ctk.CTkFrame) -> None:
+        """Create objections panel"""
+        from ui_panels import ObjectionsPanel
+        panel = ObjectionsPanel(self.root, self.managers, self.handlers)
+        panel.create_panel(parent)
+    
+    def create_status_bar(self, parent: ctk.CTkFrame) -> None:
+        """Create status bar"""
+        try:
+            # Create status bar frame
+            status_frame = ctk.CTkFrame(parent)
+            status_frame.pack(fill="x", side="bottom", padx=5, pady=5)
+            
+            # Status message
+            self.status_label = ctk.CTkLabel(
+                status_frame,
+                text="Ready",
+                font=("Arial", 12)
+            )
+            self.status_label.pack(side="left", padx=5)
+            
+            # Version info
+            version_label = ctk.CTkLabel(
+                status_frame,
+                text=f"v{APP_VERSION}",
+                font=("Arial", 12)
+            )
+            version_label.pack(side="right", padx=5)
+            
+        except Exception as e:
+            logging.error(f"Error creating status bar: {str(e)}")
+            raise
+    
+    def show_splash_screen(self) -> None:
+        """Show splash screen"""
+        try:
+            # Create splash screen window
+            splash = ctk.CTkToplevel(self.root)
+            splash.title("")
+            splash.geometry("400x200")
+            splash.overrideredirect(True)
+            
+            # Center splash screen
+            screen_width = self.root.winfo_screenwidth()
+            screen_height = self.root.winfo_screenheight()
+            x = (screen_width - 400) // 2
+            y = (screen_height - 200) // 2
+            splash.geometry(f"+{x}+{y}")
+            
+            # Add content
+            ctk.CTkLabel(
+                splash,
+                text=APP_NAME,
+                font=("Arial", 24, "bold")
+            ).pack(pady=20)
+            
+            ctk.CTkLabel(
+                splash,
+                text=f"Version {APP_VERSION}",
+                font=("Arial", 14)
+            ).pack()
+            
+            # Progress bar
+            progress = ctk.CTkProgressBar(splash)
+            progress.pack(pady=20, padx=40, fill="x")
+            progress.set(0)
+            
+            # Schedule splash screen close
+            self.root.after(2000, lambda: self.close_splash_screen(splash))
+            
+        except Exception as e:
+            logging.error(f"Error showing splash screen: {str(e)}")
+            # Continue without splash screen
+            self.root.deiconify()
+    
+    def close_splash_screen(self, splash: ctk.CTkToplevel) -> None:
+        """Close splash screen"""
+        try:
+            splash.destroy()
+            self.root.deiconify()
+            
+        except Exception as e:
+            logging.error(f"Error closing splash screen: {str(e)}")
+            self.root.deiconify()
     
     def show_error_and_exit(self, message: str) -> None:
         """Show error message and exit application"""
