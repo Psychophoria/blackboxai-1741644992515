@@ -1,0 +1,202 @@
+----------------- GENERAL API INFORMATION --------------------
+Rate Limits and Restrictions  
+10,000 leads posted per hour for data creation  
+2,000 leads searched / updated per hour
+
+Webhooks and Callbacks  
+Readymode doesnt have webhook functionality for our inbound API
+
+SDKs and Libraries  
+Readymode doesnt have native SDK's for Python. Our API is primarily HTTP Post / cURL post.
+
+Error Handling  
+Error handling will happen natively when a call is made to the API. The JSON response will tell you the issue if one exists
+
+Authentication Details  
+Authentication as per the documentation is done with API_user / API_pass passed through as a query parameter. This is a username and a password of the agent/user in the Readymode system. The only exception to this is the data posting which has a build it encoded key in the URL that acts as an authorization
+
+All API endpoints in the documentation with the exception of 2 API's (Search/Get: https://www.postman.com/material-pilot-5634432/readymode-search-get/collection/kjgb1sc/get-search-api?action=share&creator=20570766) are POST method. All parameters are also listed in the documentation or the account's TPI Posting form https://roofingappointments.readymode.com/TPI/post/
+
+Your CRM/GATEWAY/ENDPOINT/BASE/ URL for the Python program is: 
+"https://roofingappointments.readymode.com/"
+
+------------------- API PARAMETERS -------------------------- 
+(These parameters & data have been acquired from https://roofingappointments.readymode.com/TPI/post/ - this URL is the TPI posting form, note that "roofingappointments" is the correct GATEWAY/CRM URL for ReadyMode that we are utilizing in our application.)
+                                                                                                                                                                                     
+### Lead Entry Table
+
+| **Post Field**              | **Value**                                | **DB Type**                  | **CRM Type**          | **Default**       | **Required** |
+|---------------------------- |----------------------------------------- |------------------------------|----------------------- |------------------ |------------- |
+| lead[0][firstName]          | First Name                               | varchar(64)                  | text                  | NULL              | No          |
+| lead[0][lastName]           | Last Name                                | varchar(64)                  | text                  | NULL              | No          |
+| lead[0][phone]              | Phone Number                             | bigint(20) unsigned          | Valid phone           | n/a               | Yes         |
+| lead[0][phone1]             | Ph#5                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone2]             | Ph#4                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone3]             | Cell Phone                               | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone4]             | Ph#6                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone5]             | Ph#10                                    | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone6]             | Ph#8                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone7]             | Ph#7                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone8]             | Ph#9                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][phone9]             | Ph#2                                     | bigint(20) unsigned          | phone                 | NULL              | No          |
+| lead[0][address]            | Address                                  | varchar(64)                  | text                  | NULL              | No          |
+| lead[0][city]               | City                                     | varchar(40)                  | text                  | NULL              | No          |
+| lead[0][state]              | State                                    | varchar(64)                  | ISO 3166-2            | NULL              | No          |
+| lead[0][zip]                | Zip Code                                 | varchar(64)                  | text                  | NULL              | No          |
+| lead[0][country]            | Confirmed Home and Cell                 | varchar(64)                  | dropdown              | NULL              | Yes         |
+| lead[0][email]              | Email                                    | varchar(64)                  | text                  | NULL              | No          |
+| lead[0][consentedAt]        | mm/dd/yyyy                               | date                        |                       | NULL              | No          |
+| lead[0][Custom_1]           | Roof Type                                | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_2]           | Roof Age                                 | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_3]           | How Many Stories                        | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_4]           | Has Contractor                          | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_5]           | Has Insurance                           | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_6]           | Insurance Co. Name                      | varchar(128)                 | text                  | NULL              | No          |
+| lead[0][Custom_7]           | Call Notes                               | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_8]           | mm/dd/yyyy                               | datetime                  |                       | NULL              | No          |
+| lead[0][Custom_9]           | Appointment Confirmed                   | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_10]          | Roof Leaks                               | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_11]          | SOLAR Average Electric Bill             | varchar(128)                 | text                  | NULL              | Yes         |
+| lead[0][Custom_12]          | SOLAR Interested in Batt                | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_13]          | SOLAR Do They Have S                    | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_14]          | Confirmed Address                       | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_15]          | Consent to Send Em                      | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_16]          | Confirmed Property Owner                | varchar(128)                 | dropdown              | NULL              | No          |
+| lead[0][Custom_17]          | SOLAR Credit Score: (581)               | varchar(128)                 | text                  | NULL              | No          |
+| lead[0][lead_date]          | Lead date/time                           | datetime                  |                       | 'Current_time'    | No          |
+| lead[0][times_called]       | Times called                             | smallint unsigned          |                       | '0'             | No          |
+
+------------------ ADDITIONAL API INFORMATION -----------------------
+(This data has been acquired from documentation directly from ReadyMode technical support & https://www.postman.com/material-pilot-5634432/readymode-search-get/collection/kjgb1sc/get-search-api?action=share&creator=20570766 ) 
+
+# ReadyMode Search/Get API Documentation
+
+## General Information
+- **Title**: ReadyMode Search/Get
+- **Source**: Postman API Network
+- **BASE/PRIMARY/GATEWAY/CRM URL**: https://roofingappointments.readymode.com
+- **Postman Reference URL**: https://www.postman.com/material-pilot-5634432/readymode-search-get/request/4s2godj/https-gatewayurl-readymode-com-tpi-search-lead-phonenumber-api-user-api-api-pass-api?origin=request
+
+---
+
+## API Endpoints
+### Get/Search API
+- **Base Path**: /
+- **Endpoints**:
+  1. **SEARCH**: https://roofingappointments.readymode.com/TPI/search/Lead/{{phoneNumber}}?API_user=API&API_pass=API  
+     - **Description**: Search for a lead by phone number.
+  2. **GET**: https://roofingappointments.readymode.com/TPI/get/Lead/{{itemID}}?API_user=API&API_pass=API  
+     - **Description**: Retrieve a lead by item ID.
+
+## Query Parameters
+- **API_user**: API
+- **API_pass**: API
+- **Citation**: https://roofingappointments.readymode.com/TPI/search/Lead/{{phoneNumber}}?API_user=API&API_pass=API
+
+Authentication is done with API_user / API_pass passed through as a query parameter.
+
+---
+
+# Integrations/Lead Update API
+
+The new Lead Update API can be used to search for and update all standard and custom properties of a lead, except its id and phone numbers. Leads are identified by campaignId and phoneNumber. If multiple leads are found that match those parameters, they will all be returned and/or updated.
+
+All API calls need authentication by passing in two query parameters, API_user and API_pass. The client should create a separate user (with manager permissions), and use that user’s credentials in these query parameters.
+
+All API calls return data in JSON format. The update API call also expects a request body in JSON format.
+
+### Search for Leads by Campaign Id and Phone number
+This returns a list of leads that satisfy that campaignId and phoneNumber. All standard and custom properties of the lead shall be returned.
+
+For example, the following call  
+may return
+
+*Notice that the last 3 properties are custom, while all the ones before are standard.*
+
+### Update Leads by Campaign Id and Phone number
+This updates any leads that satisfy that campaignId and phoneNumber. All standard and custom properties of the lead can be updated except its id and phone numbers.
+
+**GET Example**  
+1 GET https://roofingappointments.readymode.com/TPI/leadUpdate/{campaignId}/{phoneNumber}?API_user=username&API_pass=password  
+1 GET https://roofingappointments.readymode.com/TPI/leadUpdate/120/2368981221?API_user=api&API_pass=api  
+1 [  
+2 {  
+3 "Id": "1040976",  
+4 "City": "Brooklyn",  
+5 "State": "New Jersey",  
+6 "Country": "United States",  
+7 "Email": "loban.r@convertr.com",  
+8 "First Name": "Loban",  
+9 "Last Name": "Rahman",  
+10 "Zip Code": "12018",  
+11 "Address": "480 Joes Road",  
+12 "Phone Number": "2368981221",  
+13 "Alt. Phone": null,  
+14 "Date_of_birth": "01-01-1978",  
+15 "Jornaya ID": "112233",  
+16 "Handedness": "Left"  
+17 }  
+18 ]
+
+**POST Example**  
+1 POST https://roofingappointments.readymode.com/TPI/leadUpdate/{campaignId}/{phoneNumber}?API_user=username&API_pass=password  
+2 3 {  
+4 "field1": "new value",  
+   For example, the following call will return  
+   *Notice that the last 2 standard properties First Name, Last Name and one custom property Handedness all changed correctly. The Phone Number field was ignored because it is not editable, and the Random Stuff field was ignored because it does not exist.*  
+5 "field2": "new value",  
+6 ...  
+7 }
+
+1 POST https://roofingappointments.readymode.com/TPI/leadUpdate/120/2368981221?API_user=api&API_pass=api  
+2 3 {  
+4 "First Name": "Afrina",  
+5 "Last Name": "Choudhury",  
+6 "Phone Number": "5555555555",  
+7 "Handedness": "Right",  
+8 "Random Stuff": "More Random"  
+9 }
+
+1 [  
+2 {  
+3 "Id": "1040976",  
+4 "City": "Brooklyn",  
+5 "State": "New Jersey",  
+6 "Country": "United States",  
+7 "Email": "loban.r@convertr.com",  
+8 "First Name": "Afrina",  
+9 "Last Name": "Choudhury",  
+10 "Zip Code": "12018",  
+11 "Address": "480 Joes Road",  
+12 "Phone Number": "2368981221",  
+13 "Alt. Phone": null,  
+14 "Date_of_birth": "01-01-1978",  
+15 "Jornaya ID": "112233",  
+16 "Handedness": "Right"  
+17 }  
+18 ]
+
+# POST REQUEST RESPONSES
+
+ReadyMode responses will always be in the form of JSON.
+
+Example Success response:
+
+{
+    "0": {
+        "Success": true,
+        "Accepted": true,
+        "xencall_leadId": "XC:1083"
+    }
+}
+
+Example Failure response:
+
+{
+    "0": {
+        "Success": false,
+        "Error": "Invalid phone number, received: 800694104989 parsed as: 800694104989",
+        "Field": "phone",
+        "Accepted": false
+    }
+}
