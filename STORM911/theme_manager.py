@@ -105,9 +105,6 @@ class ThemeManager:
             # Set CustomTkinter color theme
             ctk.set_default_color_theme("blue")  # Base theme
 
-            # Configure custom colors
-            self._configure_custom_colors(colors)
-
     def set_font_size(self, size: str) -> None:
         """Set application font size"""
         if size in self.font_configs:
@@ -125,62 +122,44 @@ class ThemeManager:
         """Get style configuration for specific widget type"""
         return self.widget_styles.get(widget_type, {})
 
-    def _configure_custom_colors(self, colors: Dict) -> None:
-        """Configure custom colors for widgets"""
-        # Button configuration
-        ctk.CTkButton._defaults["fg_color"] = colors["primary"]
-        ctk.CTkButton._defaults["hover_color"] = colors["hover"]
-        ctk.CTkButton._defaults["text_color"] = colors["light"]
-
-        # Entry configuration
-        ctk.CTkEntry._defaults["fg_color"] = colors["background"]
-        ctk.CTkEntry._defaults["border_color"] = colors["border"]
-        ctk.CTkEntry._defaults["text_color"] = colors["foreground"]
-
-        # Frame configuration
-        ctk.CTkFrame._defaults["fg_color"] = colors["background"]
-        ctk.CTkFrame._defaults["border_color"] = colors["border"]
-
-        # Label configuration
-        ctk.CTkLabel._defaults["text_color"] = colors["foreground"]
-
     def style_button(self, button: ctk.CTkButton, style: str = "default") -> None:
         """Apply specific style to button"""
         colors = self.get_color_scheme()
         font_config = self.get_font_config()
         button_style = self.get_widget_style("button")
 
-        if style == "primary":
-            button.configure(
-                fg_color=colors["primary"],
-                hover_color=colors["hover"],
-                text_color=colors["light"]
-            )
-        elif style == "secondary":
-            button.configure(
-                fg_color=colors["secondary"],
-                hover_color=colors["dark"],
-                text_color=colors["light"]
-            )
-        elif style == "danger":
-            button.configure(
-                fg_color=colors["danger"],
-                hover_color="#c82333",
-                text_color=colors["light"]
-            )
-        elif style == "success":
-            button.configure(
-                fg_color=colors["success"],
-                hover_color="#218838",
-                text_color=colors["light"]
-            )
+        style_config = {
+            "corner_radius": button_style["corner_radius"],
+            "border_width": button_style["border_width"],
+            "font": ("Arial", font_config["button_size"])
+        }
 
-        # Apply common configurations
-        button.configure(
-            corner_radius=button_style["corner_radius"],
-            border_width=button_style["border_width"],
-            font=("Arial", font_config["button_size"])
-        )
+        if style == "primary":
+            style_config.update({
+                "fg_color": colors["primary"],
+                "hover_color": colors["hover"],
+                "text_color": colors["light"]
+            })
+        elif style == "secondary":
+            style_config.update({
+                "fg_color": colors["secondary"],
+                "hover_color": colors["dark"],
+                "text_color": colors["light"]
+            })
+        elif style == "danger":
+            style_config.update({
+                "fg_color": colors["danger"],
+                "hover_color": "#c82333",
+                "text_color": colors["light"]
+            })
+        elif style == "success":
+            style_config.update({
+                "fg_color": colors["success"],
+                "hover_color": "#218838",
+                "text_color": colors["light"]
+            })
+
+        button.configure(**style_config)
 
     def style_entry(self, entry: ctk.CTkEntry) -> None:
         """Apply style to entry widget"""
