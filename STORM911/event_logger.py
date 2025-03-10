@@ -4,232 +4,251 @@ Handles application event logging and tracking
 """
 
 import os
-import logging
 import json
+import logging
 from datetime import datetime
-from typing import Dict, Optional, Any
-from pathlib import Path
+from typing import Dict, Any, Optional
 
 class EventLogger:
-    def __init__(self, app_dir: str = None):
+    def __init__(self):
         """Initialize Event Logger"""
-        self.app_dir = app_dir or os.path.dirname(os.path.abspath(__file__))
-        self.logs_dir = os.path.join(self.app_dir, 'logs')
+        self.logs_dir = "logs"
+        self.events_file = os.path.join(self.logs_dir, "events.log")
+        self.error_file = os.path.join(self.logs_dir, "error.log")
+        self.security_file = os.path.join(self.logs_dir, "security.log")
         
         # Ensure logs directory exists
         os.makedirs(self.logs_dir, exist_ok=True)
         
-        # Set up logging configuration
+        # Configure logging
         self._setup_logging()
         
-        # Initialize event categories
-        self.categories = {
-            'user': self._log_user_event,
-            'system': self._log_system_event,
-            'api': self._log_api_event,
-            'error': self._log_error_event,
-            'security': self._log_security_event,
-            'call': self._log_call_event
+        # Initialize event counters
+        self.event_counts = {
+            "user": 0,
+            "system": 0,
+            "error": 0,
+            "security": 0
         }
     
     def _setup_logging(self) -> None:
         """Set up logging configuration"""
-        # Main application log
-        main_handler = logging.FileHandler(
-            os.path.join(self.logs_dir, 'storm911.log')
-        )
-        main_handler.setFormatter(
-            logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        )
-        
-        # Error log
-        error_handler = logging.FileHandler(
-            os.path.join(self.logs_dir, 'errors.log')
-        )
-        error_handler.setFormatter(
-            logging.Formatter('%(asctime)s - %(levelname)s - %(message)s\n%(exc_info)s')
-        )
-        error_handler.setLevel(logging.ERROR)
-        
-        # API log
-        api_handler = logging.FileHandler(
-            os.path.join(self.logs_dir, 'api.log')
-        )
-        api_handler.setFormatter(
-            logging.Formatter('%(asctime)s - %(message)s')
-        )
-        
-        # Security log
-        security_handler = logging.FileHandler(
-            os.path.join(self.logs_dir, 'security.log')
-        )
-        security_handler.setFormatter(
-            logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        )
-        
-        # Call log
-        call_handler = logging.FileHandler(
-            os.path.join(self.logs_dir, 'calls.log')
-        )
-        call_handler.setFormatter(
-            logging.Formatter('%(asctime)s - %(message)s')
-        )
-        
-        # Configure loggers
-        logging.getLogger('main').addHandler(main_handler)
-        logging.getLogger('error').addHandler(error_handler)
-        logging.getLogger('api').addHandler(api_handler)
-        logging.getLogger('security').addHandler(security_handler)
-        logging.getLogger('call').addHandler(call_handler)
+        try:
+            # Main logger
+            logging.basicConfig(
+                level=logging.INFO,
+                format='%(asctime)s - %(levelname)s - %(message)s',
+                datefmt='%Y-%m-%d %H:%M:%S'
+            )
+            
+            # Events logger
+            events_handler = logging.FileHandler(self.events_file)
+            events_handler.setFormatter(
+                logging.Formatter('%(asctime)s - %(message)s')
+            )
+            self.events_logger = logging.getLogger('events')
+            self.events_logger.addHandler(events_handler)
+            self.events_logger.setLevel(logging.INFO)
+            
+            # Error logger
+            error_handler = logging.FileHandler(self.error_file)
+            error_handler.setFormatter(
+                logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            )
+            self.error_logger = logging.getLogger('error')
+            self.error_logger.addHandler(error_handler)
+            self.error_logger.setLevel(logging.ERROR)
+            
+            # Security logger
+            security_handler = logging.FileHandler(self.security_file)
+            security_handler.setFormatter(
+                logging.Formatter('%(asctime)s - SECURITY - %(message)s')
+            )
+            self.security_logger = logging.getLogger('security')
+            self.security_logger.addHandler(security_handler)
+            self.security_logger.setLevel(logging.INFO)
+            
+        except Exception as e:
+            print(f"Error setting up logging: {str(e)}")
     
-    def _get_timestamp(self) -> str:
-        """Get current timestamp"""
-        return datetime.now().isoformat()
+    def log_event(
+        self,
+        category: str,
+        event_type: str,
+        data: Optional[Dict] = None
+    ) -> None:
+        """Log an application event"""
+        try:
+            # Create event data
+            event = {
+                "timestamp": datetime.now().isoformat(),
+                "category": category,
+                "type": event_type,
+                "data": data or {}
+            }
+            
+            # Log based on category
+            if category == "error":
+                self.error_logger.error(json.dumps(event))
+                self.event_counts["error"] += 1
+            elif category == "security":
+                self.security_logger.info(json.dumps(event))
+                self.event_counts["security"] += 1
+            elif category == "user":
+                self.events_logger.info(json.dumps(event))
+                self.event_counts["user"] += 1
+            else:  # system events
+                self.events_logger.info(json.dumps(event))
+                self.event_counts["system"] += 1
+            
+        except Exception as e:
+            print(f"Error logging event: {str(e)}")
     
-    def _sanitize_data(self, data: Dict) -> Dict:
-        """Remove sensitive information from log data"""
-        sensitive_fields = ['password', 'api_key', 'token', 'ssn', 'credit_card']
-        sanitized = data.copy()
-        
-        for field in sensitive_fields:
-            if field in sanitized:
-                sanitized[field] = '********'
-        
-        return sanitized
+    def log_error(
+        self,
+        error: Exception,
+        context: Optional[Dict] = None
+    ) -> None:
+        """Log an error with context"""
+        try:
+            error_data = {
+                "error_type": type(error).__name__,
+                "error_message": str(error),
+                "context": context or {}
+            }
+            self.log_event("error", "exception", error_data)
+            
+        except Exception as e:
+            print(f"Error logging error: {str(e)}")
     
-    def _log_user_event(self, event_type: str, details: Dict) -> None:
-        """Log user event"""
-        logger = logging.getLogger('main')
-        sanitized_details = self._sanitize_data(details)
-        logger.info(f"USER EVENT - {event_type}: {json.dumps(sanitized_details)}")
+    def log_security_event(
+        self,
+        event_type: str,
+        details: Dict
+    ) -> None:
+        """Log a security-related event"""
+        try:
+            self.log_event("security", event_type, details)
+            
+        except Exception as e:
+            print(f"Error logging security event: {str(e)}")
     
-    def _log_system_event(self, event_type: str, details: Dict) -> None:
-        """Log system event"""
-        logger = logging.getLogger('main')
-        logger.info(f"SYSTEM EVENT - {event_type}: {json.dumps(details)}")
+    def get_event_counts(self) -> Dict[str, int]:
+        """Get current event counts"""
+        return self.event_counts.copy()
     
-    def _log_api_event(self, event_type: str, details: Dict) -> None:
-        """Log API event"""
-        logger = logging.getLogger('api')
-        sanitized_details = self._sanitize_data(details)
-        logger.info(f"API EVENT - {event_type}: {json.dumps(sanitized_details)}")
-    
-    def _log_error_event(self, event_type: str, details: Dict) -> None:
-        """Log error event"""
-        logger = logging.getLogger('error')
-        logger.error(f"ERROR EVENT - {event_type}: {json.dumps(details)}")
-    
-    def _log_security_event(self, event_type: str, details: Dict) -> None:
-        """Log security event"""
-        logger = logging.getLogger('security')
-        sanitized_details = self._sanitize_data(details)
-        logger.info(f"SECURITY EVENT - {event_type}: {json.dumps(sanitized_details)}")
-    
-    def _log_call_event(self, event_type: str, details: Dict) -> None:
-        """Log call event"""
-        logger = logging.getLogger('call')
-        sanitized_details = self._sanitize_data(details)
-        logger.info(f"CALL EVENT - {event_type}: {json.dumps(sanitized_details)}")
-    
-    def log_event(self, category: str, event_type: str, details: Dict) -> None:
-        """Log an event"""
-        if category in self.categories:
-            try:
-                # Add timestamp to details
-                details['timestamp'] = self._get_timestamp()
-                
-                # Log the event
-                self.categories[category](event_type, details)
-                
-            except Exception as e:
-                # Log error in main log
-                logging.getLogger('main').error(
-                    f"Error logging {category} event: {str(e)}"
-                )
-        else:
-            logging.getLogger('main').error(f"Invalid event category: {category}")
+    def clear_logs(self) -> bool:
+        """Clear all log files"""
+        try:
+            # Clear each log file
+            open(self.events_file, 'w').close()
+            open(self.error_file, 'w').close()
+            open(self.security_file, 'w').close()
+            
+            # Reset counters
+            self.event_counts = {
+                "user": 0,
+                "system": 0,
+                "error": 0,
+                "security": 0
+            }
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error clearing logs: {str(e)}")
+            return False
     
     def get_recent_events(
         self,
-        category: str = None,
+        category: Optional[str] = None,
         limit: int = 100
     ) -> list:
         """Get recent events from log"""
         events = []
-        
         try:
-            # Determine which log file to read
-            if category == 'error':
-                log_file = os.path.join(self.logs_dir, 'errors.log')
-            elif category == 'api':
-                log_file = os.path.join(self.logs_dir, 'api.log')
-            elif category == 'security':
-                log_file = os.path.join(self.logs_dir, 'security.log')
-            elif category == 'call':
-                log_file = os.path.join(self.logs_dir, 'calls.log')
+            # Read appropriate log file
+            if category == "error":
+                log_file = self.error_file
+            elif category == "security":
+                log_file = self.security_file
             else:
-                log_file = os.path.join(self.logs_dir, 'storm911.log')
+                log_file = self.events_file
             
-            # Read events from log file
+            # Read events
             with open(log_file, 'r') as f:
                 lines = f.readlines()[-limit:]
-                events = [line.strip() for line in lines]
-            
-            return events
+                for line in lines:
+                    try:
+                        # Extract JSON part
+                        json_str = line.split(" - ")[-1]
+                        event = json.loads(json_str)
+                        if not category or event.get("category") == category:
+                            events.append(event)
+                    except:
+                        continue
             
         except Exception as e:
-            logging.getLogger('main').error(
-                f"Error reading events from log: {str(e)}"
-            )
-            return []
+            print(f"Error getting recent events: {str(e)}")
+        
+        return events
     
-    def clear_logs(self, category: str = None) -> bool:
-        """Clear log files"""
+    def get_error_summary(self) -> Dict[str, Any]:
+        """Get summary of recent errors"""
         try:
-            if category:
-                # Clear specific log file
-                log_file = os.path.join(self.logs_dir, f'{category}.log')
-                if os.path.exists(log_file):
-                    with open(log_file, 'w') as f:
-                        f.write('')
-            else:
-                # Clear all log files
-                for file in os.listdir(self.logs_dir):
-                    if file.endswith('.log'):
-                        with open(os.path.join(self.logs_dir, file), 'w') as f:
-                            f.write('')
+            errors = self.get_recent_events("error")
             
-            return True
+            # Count errors by type
+            error_types = {}
+            for error in errors:
+                error_type = error.get("data", {}).get("error_type", "unknown")
+                error_types[error_type] = error_types.get(error_type, 0) + 1
+            
+            return {
+                "total_errors": len(errors),
+                "error_types": error_types,
+                "most_recent": errors[-1] if errors else None
+            }
             
         except Exception as e:
-            logging.getLogger('main').error(f"Error clearing logs: {str(e)}")
-            return False
+            print(f"Error getting error summary: {str(e)}")
+            return {
+                "total_errors": 0,
+                "error_types": {},
+                "most_recent": None
+            }
     
-    def archive_logs(self, days: int = 30) -> bool:
+    def archive_old_logs(self, days: int = 30) -> bool:
         """Archive logs older than specified days"""
         try:
-            archive_dir = os.path.join(self.logs_dir, 'archive')
+            # Create archive directory
+            archive_dir = os.path.join(self.logs_dir, "archive")
             os.makedirs(archive_dir, exist_ok=True)
             
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            archive_file = os.path.join(
-                archive_dir,
-                f'logs_archive_{timestamp}.zip'
-            )
+            # Get current timestamp
+            now = datetime.now()
             
-            # Create archive
-            import zipfile
-            with zipfile.ZipFile(archive_file, 'w') as zipf:
-                for file in os.listdir(self.logs_dir):
-                    if file.endswith('.log'):
-                        file_path = os.path.join(self.logs_dir, file)
-                        zipf.write(file_path, file)
-            
-            # Clear current logs
-            self.clear_logs()
+            # Archive each log file if old enough
+            for log_file in [self.events_file, self.error_file, self.security_file]:
+                if os.path.exists(log_file):
+                    # Check file age
+                    mtime = datetime.fromtimestamp(os.path.getmtime(log_file))
+                    age = (now - mtime).days
+                    
+                    if age >= days:
+                        # Create archive filename
+                        base_name = os.path.basename(log_file)
+                        archive_name = f"{base_name}.{mtime.strftime('%Y%m%d')}"
+                        archive_path = os.path.join(archive_dir, archive_name)
+                        
+                        # Move file to archive
+                        os.rename(log_file, archive_path)
+                        
+                        # Create new empty log file
+                        open(log_file, 'w').close()
             
             return True
             
         except Exception as e:
-            logging.getLogger('main').error(f"Error archiving logs: {str(e)}")
+            print(f"Error archiving logs: {str(e)}")
             return False
