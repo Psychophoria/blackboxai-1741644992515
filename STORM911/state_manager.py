@@ -1,50 +1,47 @@
 """
 State Manager for Storm911
-Handles application state management and data persistence
+Handles application state management and persistence
 """
 
 import os
 import json
 import logging
+from typing import Dict, Any, Optional
 from datetime import datetime
-from typing import Dict, Optional, Any
-from pathlib import Path
 
 class StateManager:
-    def __init__(self, app_dir: str = None):
+    def __init__(self):
         """Initialize State Manager"""
-        self.app_dir = app_dir or os.path.dirname(os.path.abspath(__file__))
-        self.data_dir = os.path.join(self.app_dir, 'data')
-        self.state_file = os.path.join(self.data_dir, 'app_state.json')
+        self.data_dir = "data"
+        self.state_file = os.path.join(self.data_dir, "app_state.json")
         
         # Ensure data directory exists
         os.makedirs(self.data_dir, exist_ok=True)
         
         # Initialize state
         self.state = {
-            'current_call': None,
-            'api_credentials': None,
-            'last_search': None,
-            'recent_calls': [],
-            'settings': self._get_default_settings()
+            "current_call": None,
+            "recent_calls": [],
+            "last_search": None,
+            "last_export": None,
+            "ui_state": {
+                "current_page": 0,
+                "panels": {
+                    "caller_info": True,
+                    "transcript": True,
+                    "objections": True
+                }
+            },
+            "session": {
+                "start_time": datetime.now().isoformat(),
+                "call_count": 0,
+                "export_count": 0,
+                "email_count": 0
+            }
         }
         
-        # Load existing state
+        # Load saved state
         self.load_state()
-    
-    def _get_default_settings(self) -> Dict:
-        """Get default application settings"""
-        return {
-            'theme': 'dark',
-            'font_size': 'normal',
-            'auto_save': True,
-            'confirm_dispositions': True,
-            'max_recent_calls': 50,
-            'pdf_export_dir': os.path.join(self.app_dir, 'EXPORTS'),
-            'log_level': 'INFO',
-            'api_timeout': 30,
-            'last_updated': datetime.now().isoformat()
-        }
     
     def load_state(self) -> None:
         """Load application state from file"""
@@ -58,12 +55,12 @@ class StateManager:
             logging.error(f"Error loading application state: {str(e)}")
     
     def save_state(self) -> bool:
-        """Save current application state to file"""
+        """Save current application state"""
         try:
-            # Update last modified timestamp
-            self.state['last_updated'] = datetime.now().isoformat()
+            # Update session info
+            self.state["session"]["last_save"] = datetime.now().isoformat()
             
-            # Save state to file
+            # Save to file
             with open(self.state_file, 'w') as f:
                 json.dump(self.state, f, indent=2)
             
@@ -76,150 +73,119 @@ class StateManager:
     
     def get_current_call(self) -> Optional[Dict]:
         """Get current call data"""
-        return self.state.get('current_call')
+        return self.state.get("current_call")
     
     def set_current_call(self, call_data: Dict) -> None:
         """Set current call data"""
-        self.state['current_call'] = call_data
-        self.save_state()
+        try:
+            self.state["current_call"] = call_data
+            self.state["session"]["call_count"] += 1
+            
+            # Add to recent calls
+            if call_data:
+                self.add_recent_call(call_data)
+            
+            self.save_state()
+            
+        except Exception as e:
+            logging.error(f"Error setting current call: {str(e)}")
     
     def clear_current_call(self) -> None:
         """Clear current call data"""
-        if self.state['current_call']:
-            # Add to recent calls before clearing
-            self.add_recent_call(self.state['current_call'])
-            self.state['current_call'] = None
-            self.save_state()
-    
-    def get_api_credentials(self) -> Optional[Dict]:
-        """Get stored API credentials"""
-        return self.state.get('api_credentials')
-    
-    def set_api_credentials(self, credentials: Dict) -> None:
-        """Set API credentials"""
-        self.state['api_credentials'] = credentials
+        self.state["current_call"] = None
         self.save_state()
     
-    def clear_api_credentials(self) -> None:
-        """Clear stored API credentials"""
-        self.state['api_credentials'] = None
+    def add_recent_call(self, call_data: Dict) -> None:
+        """Add call to recent calls list"""
+        try:
+            # Add timestamp
+            call_data["timestamp"] = datetime.now().isoformat()
+            
+            # Add to list
+            self.state["recent_calls"].insert(0, call_data)
+            
+            # Keep only last 50 calls
+            self.state["recent_calls"] = self.state["recent_calls"][:50]
+            
+            self.save_state()
+            
+        except Exception as e:
+            logging.error(f"Error adding recent call: {str(e)}")
+    
+    def get_recent_calls(self) -> list:
+        """Get list of recent calls"""
+        return self.state.get("recent_calls", [])
+    
+    def set_last_search(self, search_data: Dict) -> None:
+        """Set last search data"""
+        self.state["last_search"] = search_data
         self.save_state()
     
     def get_last_search(self) -> Optional[Dict]:
         """Get last search data"""
-        return self.state.get('last_search')
+        return self.state.get("last_search")
     
-    def set_last_search(self, search_data: Dict) -> None:
-        """Set last search data"""
-        self.state['last_search'] = search_data
-        self.save_state()
-    
-    def get_recent_calls(self, limit: int = None) -> list:
-        """Get list of recent calls"""
-        calls = self.state.get('recent_calls', [])
-        if limit:
-            return calls[:limit]
-        return calls
-    
-    def add_recent_call(self, call_data: Dict) -> None:
-        """Add call to recent calls list"""
-        # Add timestamp if not present
-        if 'timestamp' not in call_data:
-            call_data['timestamp'] = datetime.now().isoformat()
-        
-        # Add to beginning of list
-        self.state['recent_calls'].insert(0, call_data)
-        
-        # Trim list if needed
-        max_calls = self.get_setting('max_recent_calls')
-        if len(self.state['recent_calls']) > max_calls:
-            self.state['recent_calls'] = self.state['recent_calls'][:max_calls]
-        
-        self.save_state()
-    
-    def clear_recent_calls(self) -> None:
-        """Clear recent calls list"""
-        self.state['recent_calls'] = []
-        self.save_state()
-    
-    def get_setting(self, key: str) -> Any:
-        """Get specific setting value"""
-        return self.state['settings'].get(key)
-    
-    def set_setting(self, key: str, value: Any) -> None:
-        """Set specific setting value"""
-        self.state['settings'][key] = value
-        self.save_state()
-    
-    def reset_settings(self) -> None:
-        """Reset settings to defaults"""
-        self.state['settings'] = self._get_default_settings()
-        self.save_state()
-    
-    def export_state(self, filepath: str) -> bool:
-        """Export current state to file"""
+    def set_ui_state(self, key: str, value: Any) -> None:
+        """Set UI state value"""
         try:
-            with open(filepath, 'w') as f:
-                json.dump(self.state, f, indent=2)
-            return True
-        except Exception as e:
-            logging.error(f"Error exporting state: {str(e)}")
-            return False
-    
-    def import_state(self, filepath: str) -> bool:
-        """Import state from file"""
-        try:
-            with open(filepath, 'r') as f:
-                imported_state = json.load(f)
-                self.state.update(imported_state)
+            self.state["ui_state"][key] = value
             self.save_state()
-            return True
         except Exception as e:
-            logging.error(f"Error importing state: {str(e)}")
-            return False
+            logging.error(f"Error setting UI state: {str(e)}")
     
-    def get_call_history(self, phone: str) -> list:
-        """Get call history for specific phone number"""
-        return [
-            call for call in self.state['recent_calls']
-            if call.get('phone') == phone
-        ]
+    def get_ui_state(self, key: str, default: Any = None) -> Any:
+        """Get UI state value"""
+        return self.state["ui_state"].get(key, default)
     
-    def get_statistics(self) -> Dict:
-        """Get usage statistics"""
-        total_calls = len(self.state['recent_calls'])
-        
-        # Count dispositions
-        dispositions = {}
-        for call in self.state['recent_calls']:
-            disposition = call.get('disposition')
-            if disposition:
-                dispositions[disposition] = dispositions.get(disposition, 0) + 1
-        
-        # Calculate appointment rate
-        appointments = dispositions.get('appointment_scheduled', 0)
-        appointment_rate = (appointments / total_calls) if total_calls > 0 else 0
-        
-        return {
-            'total_calls': total_calls,
-            'dispositions': dispositions,
-            'appointment_rate': appointment_rate,
-            'last_updated': self.state['last_updated']
-        }
-    
-    def cleanup_old_data(self, days: int = 30) -> None:
-        """Remove data older than specified days"""
+    def increment_counter(self, counter_type: str) -> None:
+        """Increment session counter"""
         try:
-            cutoff = datetime.now().timestamp() - (days * 24 * 60 * 60)
-            
-            # Filter recent calls
-            self.state['recent_calls'] = [
-                call for call in self.state['recent_calls']
-                if datetime.fromisoformat(call['timestamp']).timestamp() > cutoff
-            ]
-            
-            self.save_state()
-            logging.info(f"Cleaned up data older than {days} days")
-            
+            if counter_type in ["call_count", "export_count", "email_count"]:
+                self.state["session"][counter_type] += 1
+                self.save_state()
         except Exception as e:
-            logging.error(f"Error cleaning up old data: {str(e)}")
+            logging.error(f"Error incrementing counter: {str(e)}")
+    
+    def get_session_stats(self) -> Dict:
+        """Get current session statistics"""
+        return self.state["session"]
+    
+    def reset_session(self) -> None:
+        """Reset session statistics"""
+        try:
+            self.state["session"] = {
+                "start_time": datetime.now().isoformat(),
+                "call_count": 0,
+                "export_count": 0,
+                "email_count": 0
+            }
+            self.save_state()
+        except Exception as e:
+            logging.error(f"Error resetting session: {str(e)}")
+    
+    def clear_state(self) -> None:
+        """Clear all application state"""
+        try:
+            self.state = {
+                "current_call": None,
+                "recent_calls": [],
+                "last_search": None,
+                "last_export": None,
+                "ui_state": {
+                    "current_page": 0,
+                    "panels": {
+                        "caller_info": True,
+                        "transcript": True,
+                        "objections": True
+                    }
+                },
+                "session": {
+                    "start_time": datetime.now().isoformat(),
+                    "call_count": 0,
+                    "export_count": 0,
+                    "email_count": 0
+                }
+            }
+            self.save_state()
+        except Exception as e:
+            logging.error(f"Error clearing state: {str(e)}")
