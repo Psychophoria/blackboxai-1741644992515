@@ -1,0 +1,50 @@
+# GUI Framework
+customtkinter>=5.2.0
+Pillow>=10.0.0
+
+# API and Networking
+requests>=2.31.0
+urllib3>=2.0.4
+
+# PDF Generation
+reportlab>=4.0.4
+
+# Email Handling
+secure-smtplib>=0.1.1
+email-validator>=2.0.0.post2
+
+# Date/Time Handling
+python-dateutil>=2.8.2
+
+# Phone Number Handling
+phonenumbers>=8.13.19
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Development Tools
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.4.1
+isort>=5.12.0
+
+# Documentation
+Sphinx>=7.1.1
+sphinx-rtd-theme>=1.2.2
+
+# Type Hints
+typing-extensions>=4.7.1
+
+# Logging
+python-json-logger>=2.0.7
+
+# Security
+cryptography>=41.0.2
+python-dotenv>=1.0.0
+
+# Data Validation
+pydantic>=2.1.1
+
+# File Handling
+python-magic>=0.4.27
